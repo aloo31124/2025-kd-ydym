@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Silverlight call preview</title>
+    <script type="text/javascript">
+        var initPreviewParas=null;
+        function htmlPreview(data) {
+            initPreviewParas ={xml:data};
+            var OpenWindow = window.open('./index.html?app=preview', "", '');
+            
+        }
+        function getInitPreviewParas(){
+            return initPreviewParas;
+        }
+
+        function doPreviewByXML(filename) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './web/' + filename, false);
+            xhr.send(null);
+
+            initPreviewParas ={xml:xhr.responseText};
+            var OpenWindow = window.open('./index.html?app=preview&by=xml', "", '');
+        }
+
+        function doPreviewByB64() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', './web/print2.txt', false);
+            xhr.send(null);
+
+            initPreviewParas ={xml:xhr.responseText};
+            var OpenWindow = window.open('./index.html?app=preview&by=b64', "", '');
+        }
+        function doPreviewByImport() {
+            var _paras = {
+                doSno: "1040000324"
+            };
+
+            initPreviewParas ={data:_paras};
+            var OpenWindow = window.open('./index.html?app=preview&by=import', "", '');
+        }
+
+        function doPreviewBySvc() {
+            var _paras = {
+                orgNo: "XC00999340",
+                doDeptno: "0000",
+                doSno: "1040000324",
+                paperNo: 1,
+                version: "0",
+                documentType: "函",
+                token:'debug'
+            };
+
+            initPreviewParas ={data:_paras};
+            var OpenWindow = window.open('./index.html?app=preview&by=svc', "", '');
+        }
+    </script>
+
+</head>
+<body>
+<h2>預覧列印</h2>
+<button onclick="doPreviewByXML('print1.xml')">函</button>
+<button onclick="doPreviewByXML('print2.xml')">函2</button>
+<button onclick="doPreviewByXML('print16.xml')">函3</button>
+<button onclick="doPreviewByXML('print3.xml')">開會通知單</button>
+<button onclick="doPreviewByXML('print4.xml')">會勘通知單</button>
+<button onclick="doPreviewByXML('print5.xml')">電子公佈欄</button>
+<button onclick="doPreviewByXML('print6.xml')">令</button>
+<button onclick="doPreviewByXML('print7.xml')">便簽</button>
+<button onclick="doPreviewByXML('print8.xml')">派免令</button>
+<button onclick="doPreviewByXML('print9.xml')">箋函</button>
+<button onclick="doPreviewByXML('print10.xml')">M151申請漁船船員手冊</button>
+<button onclick="doPreviewByXML('print11.xml')">動支災害準備金核定通知</button>
+<button onclick="doPreviewByXML('print12.xml')">動支第二預備金核定通知</button>
+<button onclick="doPreviewByXML('print13.xml')">大量受文者</button>
+<button onclick="doPreviewByXML('print14.xml')">簽</button>
+<button onclick="doPreviewByXML('print15.xml')">動支墊付款核定通知</button>
+<button onclick="doPreviewByXML('print17.xml')">IE排版(第二頁後文稿會一直往下滑)</button>
+<button onclick="doPreviewByB64()">Base64</button>
+<button onclick="doPreviewByImport()">滙入</button>
+<button onclick="doPreviewBySvc()">參數</button>
+</body>
+</html>

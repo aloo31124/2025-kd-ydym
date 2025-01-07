@@ -1,0 +1,689 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="公文檔案管理系統" />
+    <meta name="author" content="康大" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <title>公文檔案管理系統</title>
+
+    <!-- JavaScript 資源加載 -->
+    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="assets/js/vendor/jquery.blockUI.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/bootbox.min.js"></script>
+    <script src="assets/js/vendor/ace-elements.min.js"></script>
+    <script src="assets/js/vendor/ace.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- DataTables 和相關插件 -->
+    <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
+    <script src="assets/js/vendor/dataTables.select.min.js"></script>
+    <script src="assets/js/vendor/jquery.dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/vendor/dataTables.tableTools.min.js"></script>
+    <script src="assets/js/vendor/dataTables.colVis.min.js"></script>
+    <script src="assets/js/vendor/jquery-ui.min.js"></script>
+    <script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- 核心 CSS 文件 -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome-4.6.3/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/ace.min.css"
+      class="ace-main-stylesheet"
+      id="main-ace-style"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- 現代化瀏覽器支持檢測 -->
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="assets/js/vendor/axios.min.js"></script>
+
+    <style>
+      td {
+        font-size: 20px;
+      }
+
+      th {
+        font-size: 18px;
+      }
+    </style>
+
+    <!-- 先定義 getQueryParams 函數 -->
+    <script type="text/javascript">
+      // 取得查詢參數
+      function getQueryParams() {
+        var vars = {};
+        var parts = window.location.search.substring(1).split("&");
+        for (var i = 0; i < parts.length; i++) {
+          var keyValue = parts[i].split("=");
+          vars[keyValue[0]] = keyValue[1];
+        }
+        return vars;
+      }
+    </script>
+
+    <script type="text/javascript">
+      // 使用全局變數保存用戶信息
+      var user = {
+        empNo: "ed01",
+        depNo: "00DZ",
+        roleId: "18",
+        jobNo: "00DZ003",
+        jobName: "管理師",
+        empName: "測試自然人1",
+        userPWD: "kduser123",
+      };
+
+      // 獲取當前用戶信息
+      window.getCurrentUser = function () {
+        return user;
+      };
+
+      // AJAX 呼叫 sys_login 並儲存回傳的 token 到 sessionStorage
+      function fetchOAuthToken() {
+        var oauthUrl = "http://localhost:8080/tdym/sys_login";
+        $.ajax({
+          url: oauthUrl,
+          method: "POST",
+          data: {
+            clientType: "frontend",
+            userID: user.empNo,
+            userPWD: user.userPWD,
+          },
+          xhrFields: {
+            withCredentials: true,
+          },
+          crossDomain: true,
+          success: function (response) {
+            try {
+              var jsonObject = JSON.parse(response);
+              if (jsonObject.access_token) {
+                sessionStorage.setItem("access_token", jsonObject.access_token);
+                console.log(
+                  "sys_login token has been saved to sessionStorage."
+                );
+              } else {
+                console.error("Token not found in response.");
+              }
+            } catch (e) {
+              console.error("Failed to parse token response: ", e);
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error(
+              "Error fetching OAuth token:",
+              xhr.responseText || status
+            );
+          },
+        });
+      }
+
+      // 初始化表格和數據
+      function initDataTable() {
+        var dataSet = [];
+        var jobNo = user.jobNo;
+        var roleId = user.roleId;
+        var queryString = getQueryParams();
+
+        // 默認參數
+        queryString.menu = queryString.menu || "wait"; // wait：承辦中，old：待結案
+        queryString.site = queryString.site || "localhost:8080"; // 測試機
+        var _urlDocflow = `http://${queryString.site}/tdym/rest/editor/docflow/${jobNo}/?menuId=${queryString.menu}&sort=newest&token=debug&page=1&start=0&limit=100&roleId=${roleId}`;
+
+        $.ajax({
+          url: _urlDocflow,
+          method: "GET",
+          headers: {
+            Authorization: "Bearer " + sessionStorage.getItem("access_token"),
+          },
+          success: function (data) {
+            processData(data.data, dataSet);
+            renderTable(dataSet);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error fetching data:", xhr.responseText || status);
+          },
+        });
+      }
+
+      // 處理數據
+      function processData(data, dataSet) {
+        var speedLabels = [
+          "",
+          "",
+          "<font class='label label-warning'>速</font>",
+          "<font class='label label-danger'>最</font>",
+          "",
+        ];
+        var i = 0;
+        var _href = [];
+        $.each(data, function (key, val) {
+          //                console.log(val);
+          //"dialogType":"1","docType":"C61","doSno":"1041234886","speed":"1","status1":"1","state":"來文待辦","depName":"綜合一組","gbDocflowId":"77","date":"104/12/24 15:04:20","folderId":"02","title":"推動公文電子認證機關自訂規則內容說明，請 查照。","status6":"1","status5":"0","rsvEndDate":"1050101","status4":"1","userId":"ed01","status2":"1","actionId":"0","user":"測試自然人1","roleId":"18"
+          var items = [];
+          items[0] =
+            '<label class="pos-rel"><input type="checkbox" class="" value="' +
+            val.gbDocflowId +
+            '"/> <span class="lbl"></span></label>';
+          items[1] = ++i;
+
+          _href = ["../oa/index.html?app=editor"];
+          //_href = ['../oa/index.html?app=buchen'];//補核
+          //_href = ['../oa/index.html?app=check'];//瀏覽模式
+
+          _href.push("doSno=" + val.doSno);
+          _href.push("gbDocflowId=" + val.gbDocflowId);
+          _href.push("roleId=" + val.roleId);
+          _href.push("dialogType=" + val.dialogType);
+          //_href.push("mainSno=11AA1073000600");
+
+          //預帶密件測試用
+          //_href.push("security=2");
+          //_href.push("securityDate=1080715");
+          //_href.push("releaCont=2");
+          //_href.push("releaContItic=securityDate=1080704&releaCont=2&releaContItic=5pys5Lu26IezMTA45bm0MDfmnIgwNOaXpeino+Wvhg==");
+
+          //職名章
+          _href.push("sealname=Y");
+
+          var initEditorParas = {
+            empNo: val.userId,
+            doSno: val.doSno,
+            gbDocflowId: val.gbDocflowId,
+            roleId: val.roleId,
+          };
+
+          var icon = "";
+          if (val.status4 == "2") {
+            //                    icon += '	<a id="openEditor" class="green" href="' + _href.join('&') +'" target="_blank">';
+            //                    if (i % 2 == 0) {
+            //                        icon += '		<i class="ace-icon fa fa-pencil bigger-130 text-danger editor-in"></i>';
+            //                    } else {
+            icon +=
+              '		<i class="ace-icon fa fa-pencil bigger-130 text-danger editor-open"></i>';
+            //                    }
+            //                    icon += '<a href="#my-modal" role="button" class="ace-icon fa fa-pencil bigger-130 text-danger" data-toggle="modal"/>';
+
+            items[13] = "1";
+          } else {
+            items[13] = "2";
+          }
+
+          items[3] = val.state;
+
+          icon += speedLabels[val.speed];
+
+          if (val.status1 == "1") {
+            icon += "<span class='label label-darkgreen'>來</span>";
+          } else {
+            icon += "<span class='label label-pink'>創</span>";
+          }
+
+          if (i == 1 || i == 5 || i == 10 || i == 13 || i == 17) {
+            items[2] =
+              '<i class="ace-icon fa fa-star bigger-130" style="color:#FFD500"></i>';
+          } else {
+            items[2] =
+              '<i class="ace-icon fa fa-star-o bigger-130 text-muted"></i>';
+          }
+
+          var _href2 = ["../oa/index.html?app=genpages"];
+          _href2.push("doSno=" + val.doSno);
+          _href2.push("gbDocflowId=" + val.gbDocflowId);
+          _href2.push("doDeptno=" + val.doDeptno); //頁面檔
+
+          //var _href2 = ['../oa/index.html?dialogType=4'];
+          //_href2.push("doSno=" + val.doSno);
+          //_href2.push("gbDocflowId=" + val.gbDocflowId);
+          //_href2.push("doDeptno=" + val.doDeptno);
+          //_href2.push("sFlag=Y");//密件公文製作
+
+          items[4] =
+            '<a href="' +
+            _href2.join("&") +
+            '" target="_blank">' +
+            val.doSno +
+            "</a><BR>" +
+            icon;
+
+          items[5] = val.orgOtWord + val.orgOtWordno;
+          items[6] = val.ioDep3Name;
+          items[7] = val.sendDate;
+          items[8] = val.title;
+          items[9] = val.depName;
+          items[10] = val.user;
+          items[11] =
+            val.date + "<BR><span class='blue'>" + val.rsvEndDate + "</span>";
+          items[12] = val.sendDep;
+          items[13] = _href.join("&");
+          items[14] = initEditorParas;
+          dataSet.push(items);
+        });
+      }
+
+      // 渲染 DataTable
+      function renderTable(dataSet) {
+        var tablebbb = $("#dynamic-table").DataTable({
+          data: dataSet,
+          columns: [
+            {
+              title:
+                '<center><label class="pos-rel"><input type="checkbox" class="ace"/><span class="lbl"></span></label></center>',
+              bSortable: false,
+            },
+            { title: "序號" },
+            {
+              title:
+                '<i class="ace-icon fa fa-star bigger-130" style="color:#FFD500"></i>',
+              bSortable: false,
+            },
+            { title: "狀態" },
+            { title: "公文文號", width: "160px" },
+            { title: "來文字號" },
+            { title: "來(受)文機關", width: "120px" },
+            { title: "送件日" },
+            { title: "主旨摘要" },
+            { title: "承辦單位" },
+            { title: "承辦人" },
+            { title: "收創日<br>限辦日" },
+            { title: "送件單位" },
+          ],
+          oLanguage: {
+            sProcessing: "處理中...",
+            sLengthMenu: "顯示 _MENU_ 筆記錄",
+            sZeroRecords: "無符合資料",
+            sInfo: "目前記錄：_START_ 至 _END_, 總筆數：_TOTAL_",
+            sInfoEmpty: "無任何資料",
+            sInfoFiltered: "(過濾總筆數 _MAX_)",
+            sSearch: "過濾",
+            oPaginate: {
+              sFirst: "首頁",
+              sPrevious: "上頁",
+              sNext: "下頁",
+              sLast: "末頁",
+            },
+          },
+          columnDefs: [{ targets: [1, 3, 5, 7, 9, 10, 12], visible: false }],
+        });
+
+        tablebbb = $("#dynamic-table").DataTable();
+
+        // 單行選擇/取消選擇
+        $("#dynamic-table").on("click", "td i", function (e) {
+          var isSpaEditor = $(e.target).hasClass("editor-in");
+          var isOpenEditor = $(e.target).hasClass("editor-open");
+
+          if (isOpenEditor) {
+            var rowData = tablebbb.row(this.parentNode).data();
+            var newWin = window.open(rowData[13]);
+            newWin.onbeforeunload = function () {
+              console.log("new Window closed");
+            };
+          }
+          if (isSpaEditor) {
+            $("#my-modal").modal("show");
+          }
+        });
+
+        $("#my-modal").on("show.bs.modal", function () {
+          var offset = 50;
+          $(this)
+            .find(".modal-body")
+            .attr(
+              "style",
+              "height:" + ($(window).height() - offset) + "px !important;"
+            );
+          var oTT = $.fn.dataTable.TableTools.fnGetInstance("dynamic-table");
+          var aData = oTT.fnGetSelectedData();
+          if (aData.length > 0) {
+            window.OA.app.doEditor(aData[0][14]);
+          }
+        });
+
+        $("#my-modal").on("hide.bs.modal", function () {
+          console.log("modal closed");
+        });
+
+        $(document).on(
+          "click",
+          "#dynamic-table .dropdown-toggle",
+          function (e) {
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        );
+
+        // 表單搜索功能
+        $("#dynamic-table_filter #oneline button").on("click", function (e) {
+          $("#dynamic-table_filter #oneline button").css(
+            "box-shadow",
+            "inset 0 0 0 0px #3071A9"
+          );
+          $(e.target).css("box-shadow", "inset 0 0 0 2px #3071A9");
+          changePaper(e.target.value);
+        });
+
+        var urlVal = getUrlVars();
+        if (urlVal["doSno"] != undefined) {
+          tablebbb.columns(4).search(urlVal["doSno"]).draw();
+        }
+      }
+
+      // 取得查詢參數
+      function getUrlVars() {
+        var vars = [],
+          hash;
+        var hashes = window.location.href
+          .slice(window.location.href.indexOf("?") + 1)
+          .split("&");
+        for (var i = 0; i < hashes.length; i++) {
+          hash = hashes[i].split("=");
+          vars.push(hash[0]);
+          vars[hash[0]] = hash[1];
+        }
+        return vars;
+      }
+
+      // 更改文檔篩選條件
+      function changePaper(val) {
+        changePaperId = val;
+        if (val == "1") {
+          $(".tableTools-container1 button").each(function (e) {
+            if (
+              $(this).attr("classType") == "1" ||
+              $(this).attr("classType") == "3"
+            )
+              $(this).show();
+            else $(this).hide();
+          });
+        } else if (val == "2") {
+          $(".tableTools-container1 button").each(function (e) {
+            if (
+              $(this).attr("classType") == "2" ||
+              $(this).attr("classType") == "3"
+            )
+              $(this).show();
+            else $(this).hide();
+          });
+        } else {
+          $(".tableTools-container1 button").each(function (e) {
+            $(".tableTools-container1 button").show();
+          });
+        }
+        tablebbb.columns(13).search(val).draw();
+        var n = $("input:checked").length;
+        if (n >= 2) {
+          $(".tableTools-container1 button").each(function (e) {
+            if ($(this).attr("classType") == "4") $(this).show();
+          });
+        } else {
+          if ($(this).attr("classType") == "4") $(this).hide();
+        }
+      }
+
+      // 初始化頁面
+      $(document).ready(function () {
+        fetchOAuthToken();
+        initDataTable();
+
+        $("#dialog-confirm").dialog({
+          autoOpen: false,
+          show: "blind",
+          hide: "explode",
+        });
+
+        $("#sidebar-collapse").click();
+
+        function getUrlVars() {
+          var vars = [],
+            hash;
+          var hashes = window.location.href
+            .slice(window.location.href.indexOf("?") + 1)
+            .split("&");
+          for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split("=");
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+          }
+          return vars;
+        }
+
+        // 創簽稿作業
+        $("#gotoEditor").click(function () {
+          window.open(
+            "../oa/index.html?app=editor&status=new&genDocNo=1&ePaper=Y&doDeptno=&doSno=&mainSno=&security=&securityDate=&releaCont=&releaContItic=",
+            "",
+            ""
+          );
+        });
+      });
+    </script>
+  </head>
+
+  <body class="no-skin">
+    <!-- 頂部導航欄 -->
+    <div id="navbar" class="navbar navbar-default">
+      <div class="navbar-container" id="navbar-container">
+        <button
+          type="button"
+          class="navbar-toggle menu-toggler pull-left"
+          id="menu-toggler"
+          data-target="#sidebar"
+        >
+          <span class="sr-only">Toggle sidebar</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+          <a href="#" class="navbar-brand">
+            <small>公文檔案管理系統(測試機)</small>
+          </a>
+        </div>
+
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+          <ul class="nav ace-nav">
+            <!-- 通知和消息 -->
+            <li class="grey">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="ace-icon fa fa-tasks bigger-140"></i>
+                <span class="badge badge-grey bigger-140">3</span>
+              </a>
+              <!-- 此處可加入下拉菜單內容 -->
+            </li>
+
+            <li class="purple">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i
+                  class="ace-icon fa fa-bell icon-animated-bell bigger-140"
+                ></i>
+                <span class="badge badge-important bigger-140">4</span>
+              </a>
+              <!-- 此處可加入下拉菜單內容 -->
+            </li>
+
+            <li class="green">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i
+                  class="ace-icon fa fa-envelope icon-animated-vertical bigger-140"
+                ></i>
+                <span class="badge badge-success bigger-140">5</span>
+              </a>
+              <!-- 此處可加入下拉菜單內容 -->
+            </li>
+
+            <li class="light-blue">
+              <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <i class="ace-icon fa fa-user bigger-180"></i>
+                <span class="bigger-140" id="empName">王核主</span>
+                <i class="ace-icon fa fa-caret-down"></i>
+              </a>
+              <!-- 個人設置下拉菜單 -->
+              <ul
+                class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close"
+              >
+                <li>
+                  <a href="#"><i class="ace-icon fa fa-cog"></i>個人化設定</a>
+                </li>
+                <li>
+                  <a href="profile.html"
+                    ><i class="ace-icon fa fa-user"></i>資訊</a
+                  >
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="#"><i class="ace-icon fa fa-power-off"></i>登出</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 左側導航欄 -->
+    <div class="main-container" id="main-container">
+      <div id="sidebar" class="sidebar responsive">
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+          <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+            <button
+              id="gotoCalendar"
+              class="btn btn-success"
+              type="button"
+              title="日曆待辦"
+              data-toggle="tooltip"
+              data-placement="right"
+            >
+              <i class="ace-icon fa fa-calendar bigger-140"></i>
+            </button>
+            <button
+              id="gotoEditor"
+              class="btn btn-info"
+              type="button"
+              title="創稿"
+              data-toggle="tooltip"
+              data-placement="right"
+            >
+              <i class="ace-icon fa fa-pencil-square-o bigger-140"></i>
+            </button>
+            <button
+              id="gotoQuery"
+              class="btn btn-warning"
+              type="button"
+              title="綜合查詢"
+              data-toggle="tooltip"
+              data-placement="left"
+            >
+              <i class="ace-icon fa fa-book bigger-140"></i>
+            </button>
+            <button
+              class="btn btn-danger"
+              type="button"
+              title="設定"
+              data-toggle="tooltip"
+              data-placement="left"
+            >
+              <i class="ace-icon fa fa-cog bigger-140"></i>
+            </button>
+          </div>
+
+          <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+            <span class="btn btn-success"></span>
+            <span class="btn btn-info"></span>
+            <span class="btn btn-warning"></span>
+            <span class="btn btn-danger"></span>
+          </div>
+        </div>
+
+        <ul class="nav nav-list bigger-125">
+          <li>
+            <a href="#"
+              ><i class="menu-icon fa fa-home"></i
+              ><span class="menu-text bigger-130"> 首頁 </span></a
+            >
+          </li>
+          <li class="active">
+            <a href="#" class="dropdown-toggle">
+              <i class="menu-icon fa fa-desktop"></i>
+              <span class="menu-text bigger-130"> 待辦案件 </span>
+              <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <ul class="submenu">
+              <li class="active">
+                <a href="#"
+                  ><i class="menu-icon fa fa-caret-right"></i>待核判
+                  <span class="badge badge-primary">18</span></a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+          <i
+            class="ace-icon fa fa-angle-double-left"
+            data-icon1="ace-icon fa fa-angle-double-left"
+            data-icon2="ace-icon fa fa-angle-double-right"
+          ></i>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="main-content-inner">
+          <div class="breadcrumbs" id="breadcrumbs">
+            <ul class="breadcrumb">
+              <li>
+                <i class="ace-icon fa fa-home home-icon"></i
+                ><a href="#">Home</a>
+              </li>
+              <li><a href="#">待辦案件</a></li>
+              <li class="active">待核判</li>
+            </ul>
+          </div>
+
+          <div class="page-content">
+            <div class="row">
+              <div class="col-xs-12">
+                <div>
+                  <table
+                    id="dynamic-table"
+                    class="table table-striped table-bordered table-hover"
+                  >
+                    <!-- 表格內容動態加載 -->
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-inner">
+          <div class="footer-content">
+            <span class="bigger-120">康大 &copy; 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <a
+        href="#"
+        id="btn-scroll-up"
+        class="btn-scroll-up btn btn-sm btn-inverse"
+      >
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+      </a>
+    </div>
+  </body>
+</html>

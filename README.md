@@ -1,93 +1,162 @@
-# 2025-kd-ydym
+康大公文行動簽核
+kangDa Official Authorize (oa)
+
+[開發工具]
+1. Visual Studio Code ( https://code.visualstudio.com/ )
+   + Debugger for Chrome
+
+2. NodeJs 8.11.1 LTS ( https://nodejs.org/ )
+
+[debug]
+1. npm install -g lite-server
+2. 啟webserver(其他方式也可以，如:IIS)
+cd touch/webserver
+npm start
+3. Chrome debug
+
+[ Framework - Sencha Touch ]
+http://docs.sencha.com/touch/2.4/
+http://docs.sencha.com/touch/2.4/2.4.2-apidocs/
+
+Sencha Touch教學
+Web App 行動開發http://blog.toright.com/posts/3214
+威老 http://www.cnblogs.com/weilao/category/314014.html
+Sencha Touch中文 http://extjs.org.cn/sencha-touch
+随它去吧 http://www.cnblogs.com/dowinning/
+
+[ 資料夾配置 ]
+kd 模擬管理介面：doc.html正式機，doctest.html測試機
+oa 主程式
+build 打包/離線版
+webserver node 服務器
+
+[oa] 
+app         App相關
+resources   引用資源
+thirdparty  第3方引用
+store       暫存器
+web         測試及網站相關(node.js)
+kdconfig.js 共用設定
+app.json    相依元件
+
+[app]
+主要為 model / view / controller (mvc) ／ store
+
+- model
+model/wk/{unit}       文稿模型 (統一定義在 OA.common.DIMgr)
+model/seal/{unit}.js  核章模型
+
+- model/wk 各文稿模式
+Post paras 請求參數
+Proxy      Rest 代理
+Mapping    資料轉換
+Layout     版面配製
+
+client - web client 請求資料
+common - 共用
+componets - 元件，主要是 paper.js (渲染文稿)
+form  - 表單 (不強制MVC，以個別檔案為主，common.Fields註記欄位、common.Funcs註記功能)
+
+[公文基礎格式]
+DI => WK  製作
+SI => VI  簽核
+SW        交換
+
+[build] 
+testing 編成app.js
+offline 離線版
+
+[web編譯打包]
+
+Sencha Cmd 6.2.2
+https://www.sencha.com/products/extjs/cmd-download/
+http://cdn.sencha.com/cmd/6.2.2/jre/SenchaCmd-6.2.2-windows-64bit.zip
+window 要增加環境變數 C:\Users\xxxx\bin\Sencha\Cmd\x.x.xx/..
+railsinstaller-2.2.5
+
+1	改版本	oa/app.js   qs.v =1.0.204
+2	cd touch/oa
+3	sencha app build testing
+4	產出到touch/build/testing/oa
+	線上部署AP24
+	ftp to  /home/docadmin/temp/oa
+	ssh docadmin@172.25.130.24
+	cd /home/docadmin/temp
+	sh copyOA_online.sh
+
+[離線打包]
+cd touch/build/offline
+npm install -g electron
+npm install electron-packager --save-dev
+npm install electron-winstaller --save-dev
+
+1	改版本
+	oa/app.js   qs.v =1.0.205
+	build/offline package.json  version = 1.0.205
+
+2	更改 app.json
+    [mac]
+	"testing": {
+    "output": {
+      "base": "/Users/apple/touch/build/offline/oa"
+    }}
+
+    [window]
+    "testing": {
+        "output": {
+          "base": "D:\\touch\\build\\offline\\oa"
+        }}
+
+3	編譯產出到 touch/build/offline/oa 資料夾
+	cd touch/oa
+	sencha app build testing
+
+	注意 build/offline/oa/kdconfig.js
+    要指向正式機，host_testing_ssl: 'doc.gov.taipei/tcqb/rest/'
+
+4	打包
+	【MAC】
+	cd touch/build/offline
+	npm run build_mac_production
+	壓成zip，放在 darwin/1.0.xx/oaoffline-darwin-x64.zip
+
+	[mac for window]
+	open wine
+
+	【Window】
+	cd touch/build/offline
+	
+	x86/ia32/x64
+	npm run build_win32_production  
+	node winpack32_production.js
+	
+                                                                                                        
+
+ICO圖編譯，要編譯sass
+1	http://fontawesome.io/ 找
+2	/touch/resources/sass/sencha-touch.scss 增加ICO
+3	cd touch
+4	sencha compass compile resources/sass
+
+地址簿更新
+cd touch/build/offline
+electron main.js testing g2b
+
+[開發參考]
+JavasScript 中被普遍使用的風格指南
+https://github.com/jigsawye/javascript/tree/master/es5
+
+svg dom 請參閱
+http://www.w3schools.com/dom/default.asp
+http://www.w3.org/TR/SVG/svgdom.html
+https://developer.mozilla.org/zh-TW/docs/Web/SVG
+
+【追蹤修訂】
+資料來源  OA.common.Utils.getKDRichTextBlock : MultiFormat
+動態排版  OA.components.Paper.typesetting()
 
 
+Debug
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.com/aloo31124/2025-kd-ydym.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.com/aloo31124/2025-kd-ydym/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+debugger;
+console.log('here');

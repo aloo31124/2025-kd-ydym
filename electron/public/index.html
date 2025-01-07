@@ -1,0 +1,88 @@
+<!-- saved from url=(0032)http://localhost:16888/doPostMsg -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<form name="DemoForm" action="http://localhost:16888/sign" method="POST">
+    <input type="hidden" name="tbsPackage">
+</form>
+<script type="text/javascript">
+    function receiveMessage(event) {
+        var matchstr = "(localhost|.+\.gov\.tw|172\.16\.55\.22|\.kangdainfo\.com)($|:\\d+$)";
+        if (event.origin.match(matchstr) == null) {
+            var ret = {};
+            ret["func"] = "sign";
+            ret["ret_code"] = 0x76000031;
+            ret["message"] = "在未經授權的網域執行元件";
+            window.opener.postMessage(JSON.stringify(ret), "*");
+            window.close();
+            return;
+        }
+        var ret = event.data;
+        if (ret.method[0].type = 'login')kd_doLogin(ret)
+    }
+    function kd_doLogin(kdMaker_Json) {
+        var xmlreq;
+        if (window.XMLHttpRequest) {
+            xmlreq = new XMLHttpRequest();
+        } else {
+            xmlreq = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlreq.onreadystatechange = function () {
+            if (xmlreq.readyState == 4 && xmlreq.status == 200) {
+                var ret = JSON.parse(xmlreq.responseText);
+                var reData = {};
+                reData["func"] = "getLoginInfo";
+                reData["status"] = ret.status;
+                reData["message"] = ret.message;
+                reData["cert"] = ret.cert;
+                reData["cardno"] = ret.cardno
+                var msg = JSON.stringify(reData);
+                var postTarget = window.opener;
+                postTarget.postMessage(msg, "*");
+            }
+        };
+        xmlreq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xmlreq.setRequestHeader('If-Modified-Since', 'Sat, 1 Jan 2000 00:00:00 GMT');
+        xmlreq.open("POST", "http://localhost:16888/doLogin", true);
+        xmlreq.send("kdPackage=" + JSON.stringify(kdMaker_Json));
+    }
+    function kd_doSignature(kdMaker_Json) {
+        var xmlreq;
+        if (window.XMLHttpRequest) {
+            xmlreq = new XMLHttpRequest();
+        } else {
+            xmlreq = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlreq.onreadystatechange = function () {
+            if (xmlreq.readyState == 4 && xmlreq.status == 200) {
+                var ret = JSON.parse(xmlreq.responseText);
+                var reData = {};
+                reData["func"] = "getLoginInfo";
+                reData["status"] = ret.status;
+                reData["message"] = ret.message;
+                reData["cert"] = ret.cert;
+                reData["cardno"] = ret.cardno
+                var msg = JSON.stringify(reData);
+                var postTarget = window.opener;
+                postTarget.postMessage(msg, "*");
+            }
+        };
+        xmlreq.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xmlreq.setRequestHeader('If-Modified-Since', 'Sat, 1 Jan 2000 00:00:00 GMT');
+        xmlreq.open("POST", "http://localhost:16888/doSignature", true);
+        xmlreq.send("kdPackage=" + JSON.stringify(kdMaker_Json));
+    }
+    window.addEventListener("message", receiveMessage, false);
+    var kdData = {};
+    kdData["status"] = "0";
+    kdData["func"] = "getKdData";
+    var msg = JSON.stringify(kdData);
+    var postTarget = window.opener;
+    postTarget.postMessage(msg, "*");
+</script>
+
+
+</body>
+</html>

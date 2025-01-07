@@ -1,0 +1,52 @@
+<svg width="793.7007874015749" height="1092.51969" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[text {  font-family:BiauKai,標楷體;}@media print{  .pageInterval { display: none; }  .gutterMargin { opacity: 1; }  .canvasMargin { display: none; }}]]>
+  </style>
+
+  <g class="gBackground">
+    <title></title>
+    <rect fill="#ffffff" id="canvas_background" height="1094.51969" width="795.70079" y="-1" x="-1"/>
+    <g class="gGutter" id="canvas_gutter_1">
+      <line id="svg_1" class="gutterMargin" stroke-dasharray="5,5" stroke="black" y2="1065.82677" x2="37.79528" y1="37.79528" x1="37.79528"/>
+      <text stroke-dasharray="5,5" id="svg_2" class="gutterMargin" y="277.62992" x="31.79528" font-size="12">裝</text>
+      <text stroke-dasharray="5,5" id="svg_3" class="gutterMargin" y="555.25984" x="31.79528" font-size="12">訂</text>
+      <text stroke-dasharray="5,5" id="svg_4" class="gutterMargin" y="832.88976" x="31.79528" font-size="12">線</text>
+    </g>
+    <rect stroke="#009900" stroke-width="0" stroke-dasharray=" 10 5" fill=" none" class="canvasMargin" height="933.54331" width="585.82677" y="75.59055" x="75.59055" id="canvas_margin"/>
+    <rect class="pageInterval" fill="#444444" height="7.55906" width="793.70079" y="1122.51969" x="0" id="canvas_interval_1"/>
+    <text class="canvasPage" y="1053.13386" x="325.50394" font-size="16" id="canvas_page_1">第1頁，共1頁</text>
+  </g>
+  <g class="gContent">
+    <text  stroke-dasharray="2,2" fill="#000000" stroke="#000" stroke-width="0" x="316" y="65" id="svg_5" font-size="29" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">簽 稿 會 核 單</text>
+    <rect stroke="#000" id="svg_6" height="785" width="660" y="79.99993" x="83.33334" fill-opacity="null" stroke-opacity="null" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="865" x2="230" y1="79.99993" x1="230" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="200" x2="742.33334" y1="200" x1="82.68373" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_10" y2="249.99993" x2="742.33334" y1="249.99993" x1="82.33334" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="250" x2="425" y1="200" x1="425" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="300" x2="742.33334" y1="300" x1="82.33334" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="865" x2="590" y1="249.99993" x1="590" fill-opacity="null" stroke-opacity="null" fill="none"/>
+    <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="865" x2="667" y1="249.99993" x1="667" fill-opacity="null" stroke-opacity="null" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="395" x2="742.33334" y1="395" x1="82" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="490" x2="742" y1="490" x1="82.33333" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="585" x2="742" y1="585" x1="82.33333" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="680" x2="742" y1="680" x1="82.33333" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_22" y2="770" x2="742" y1="770" x1="82.33333" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" stroke-linejoin="null" id="svg_7" y2="250" x2="573" y1="200" x1="573" fill-opacity="null" stroke-opacity="null" stroke="#000" fill="none"/>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="102" y="148" id="svg_12" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">案 情 摘 要</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="102" y="231" id="svg_14" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">主 辦 單 位</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="448.35039" y="231" id="svg_29" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">總 收 文 號</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="102" y="281" id="svg_30" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">受 會 單 位</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="311" y="281" id="svg_32" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">會 核 意 見 及 簽 章</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="602" y="270" id="svg_35" font-size="18" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">收  會</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="602" y="292" id="svg_36" font-size="18" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">時  間</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="678" y="270" id="svg_37" font-size="18" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">會  畢</text>
+    <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="678" y="292" id="svg_38" font-size="18" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">時  間</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="92" y="886" id="svg_15" font-size="17" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">說明：</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="112.35039" y="905" id="svg_23" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">一、各單位送請會核文件，除仍依照向例在簽，稿上註明 :「會○○單位」外，送</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="145" y="928" id="svg_24" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">會單位較多時，請填列本單，置於簽稿上之隨同附送。</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="112.35039" y="950" id="svg_25" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">二、送會文件經受會單位會核後，請相關承辦人員及主管人員在本單內填列意見並</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="145" y="971" id="svg_26" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">簽名或蓋章。</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="112.35039" y="993" id="svg_27" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">三、本單「收會時間」欄由受會單位填註 ;「會畢時間」欄由主辦單位填註，受會</text>
+    <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="145" y="1015" id="svg_28" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">單位有二個以上時，僅填最後一個單位的會畢時間。</text>
+  </g>
+</svg>

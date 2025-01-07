@@ -1,0 +1,34 @@
+Ext.define('OA.model.DocTempContent', {
+    extend: 'Ext.data.Model',
+    alias: 'model.DocTempContent',
+    requires: [
+        'OA.common.Utils', 'OA.common.UrlMgr'
+    ],
+    config: {
+        fields: [
+
+            //Rest Post paras
+            'sid1', 'sid2', 'hashcode', 'hashvi', 'dialogType', 'doSno', 'doDeptno', 'depNo', 'empNo', 'jobNo',
+            'orgNo', 'orgId', 'genDocNo', 'version', 'paperNo', 'agentEmplNo',
+            'gbDocflowId', 'docType', 'epaper', 'empName','docTempName',
+            // 'roleId', 'folderId', 'actionId', 'signFlag',
+            //
+            // 'subRoleId', 'subFolderId', 'subActionId', 'flowUri'
+        ],
+        proxy: {
+            type: 'rest',
+            useDefaultXhrHeader: false,
+            withCredentials: true,
+            reader: {
+                type: 'json'
+                , rootProperty: 'input'
+            },
+            writer: {
+                type: 'json',
+                rootProperty: "input"
+                //encode: true
+            }
+        }
+    }
+
+});

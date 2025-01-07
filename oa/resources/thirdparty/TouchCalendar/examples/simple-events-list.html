@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="../lib/sencha/resources/css/sencha-touch.css" media="all"/>
+        <script src="../lib/sencha/sencha-touch-debug.js" type="text/javascript">
+        </script>
+        <link rel="stylesheet" type="text/css" href="../resources/css/Ext.ux.TouchCalendarView.css" media="all"/>
+        <script src="../Ext.ux.TouchCalendarView.js" type="text/javascript">
+        </script>
+        <script src="../Ext.ux.TouchCalendarSimpleEvents/Ext.ux.TouchCalendarSimpleEvents.js" type="text/javascript">
+        </script>
+        <link rel="stylesheet" type="text/css" href="../Ext.ux.TouchCalendarSimpleEvents/resources/css/Ext.ux.TouchCalendarSimpleEvents.css" media="all"/>
+        <script src="EventStore.js" type="text/javascript">
+        </script>
+        <script type="text/javascript">
+            
+            Ext.setup({
+                onReady: function(){
+                
+                
+                
+                    var calendar = new Ext.ux.TouchCalendarView({
+                        viewMode: 'month',
+                        weekStart: 0,
+                        value: new Date(),
+                        eventStore: eventStore,
+                        
+                        plugins: [Ext.create('Ext.ux.TouchCalendarSimpleEvents')]
+                    });
+                    
+                    var calendarPanel = Ext.create('Ext.Panel', {
+                    	fullscreen: true,
+                        layout: 'fit',
+                        items: [calendar, {
+                            xtype: 'toolbar',
+                            docked: 'top',
+                            items: [{
+                                xtype: 'segmentedbutton',
+                                allowMultiple: false,
+                                items: [{
+                                    text: 'Month',
+                                    pressed: true,
+                                    handler: function(){
+                                        calendar.setViewMode('month');
+                                    }
+                                }, {
+                                    text: 'Week',
+                                    handler: function(){
+                                        calendar.setViewMode('week');
+                                    }
+                                }]
+                            }]
+                        }, {
+                            docked: 'bottom',
+                            xtype: 'list',
+                            height: 110,
+                            itemTpl: '{event} {location}',
+                            store: new Ext.data.Store({
+                                model: 'Event',
+                                data: []
+                            })
+                        }]
+                    });
+                    
+                    calendar.on('selectionchange', function(calendarview, newDate, prevDate){
+                        console.log('selectionchange');
+                        var eventList = calendarPanel.getDockedItems()[1];
+
+
+                        calendar.eventStore.clearFilter();
+                        calendar.eventStore.filterBy(function(record){
+                            var startDate = Ext.Date.clearTime(record.get('start'), true).getTime(), endDate = Ext.Date.clearTime(record.get('end'), true).getTime();
+
+                            return (startDate <= newDate) && (endDate >= newDate);
+                        }, this);
+
+                        eventList.getStore().setData(calendar.eventStore.getRange());
+                    });
+                    
+                    calendar.on('eventtap', function(event){
+                        console.log('eventtap');
+                    });
+                    calendar.on('eventdragstart', function(draggable, eventRecord, e){
+                        console.log('eventdragstart');
+                    });
+                    calendar.on('beforeeventdrop', function(draggable, eventRecord, e){
+                        console.log('beforeeventdrop');
+                        return true;
+                    });
+                    calendar.on('eventdrop', function(draggable, eventRecord, e){
+                        console.log('eventdrop');
+                    });
+                    calendar.on('eventdrag', function(draggable, eventRecord, e){
+                        console.log('eventdrag');
+                    });
+                    
+                }
+                
+                
+            });
+        </script>
+        <title></title>
+    </head>
+    <body>
+    </body>
+</html>

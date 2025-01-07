@@ -1,0 +1,68 @@
+<svg width="793.7007874015749" height="1222.51969" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[text {  font-family:BiauKai,標楷體;}@media print{  .pageInterval { display: none; }  .gutterMargin { opacity: 1; }  .canvasMargin { display: none; }}]]>
+  </style>
+
+  <g class="gBackground" stroke="null">
+    <title></title>
+    <rect fill="#ffffff" id="canvas_background" height="1224.51969" width="795.70079" y="-1" x="-1" stroke="null"/>
+    <g class="gGutter" id="canvas_gutter_1" stroke="null">
+      <line id="svg_1" class="gutterMargin" stroke-dasharray="5,5" y2="1065.82677" x2="37.79528" y1="37.79528" x1="37.79528" stroke="black"/>
+      <text stroke-dasharray="5,5" id="svg_2" class="gutterMargin" y="277.62992" x="31.79528" font-size="12" stroke="null">裝</text>
+      <text stroke-dasharray="5,5" id="svg_3" class="gutterMargin" y="555.25984" x="31.79528" font-size="12" stroke="null">訂</text>
+      <text stroke-dasharray="5,5" id="svg_4" class="gutterMargin" y="832.88976" x="31.79528" font-size="12" stroke="null">線</text>
+    </g>
+    <rect stroke-width="0" stroke-dasharray=" 10 5" fill=" none" class="canvasMargin" height="933.54331" width="585.82677" y="75.59055" x="75.59055" id="canvas_margin" stroke="#009900"/>
+    <rect class="pageInterval" fill="null" height="7.55906" width="793.70079" y="1122.51969" x="0" id="canvas_interval_1" stroke="null"/>
+  </g>
+  <g stroke="null">
+    <title></title>
+    <g class="gContent" id="svg_31" stroke="null">
+      <rect stroke="#000" id="svg_6" height="890" width="660" y="57.99993" x="76.33334" fill-opacity="null" stroke-opacity="null" fill="none"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="948" x2="225" y1="176.99994" x1="225" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="177" x2="737.33334" y1="177" x1="77.68373" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="300" x2="737.33334" y1="300" x1="78" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_17" y2="420" x2="403" y1="178" x1="403" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="420" x2="737" y1="420" x1="77.33333" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="238" x2="736" y1="238" x1="403" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="600" x2="737" y1="600" x1="77.33333" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="89" y="970" id="svg_15" font-size="17" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">說明：</text>
+      <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="109.35039" y="989" id="svg_23" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">一、機密文書機密等級奉准變更或註銷時先調出原卷核對。</text>
+      <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="109.35039" y="1010" id="svg_25" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">二、將原案封面或公文紙上所標機密等級以雙線劃去，再於明顯處浮貼已列明資料</text>
+      <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="142" y="1029" id="svg_26" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">經登記人簽章之紀錄單。</text>
+      <text fill="#000000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="109.35039" y="1048" id="svg_24" font-size="16" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve" stroke="null">三、原案照變更之等級或非機密文件保管。</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="163.87307" y="156.89472" id="svg_33" font-size="29" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">機密文書機密等級變更或註銷紀錄單</text>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_7" y2="300" x2="543" y1="178" x1="543" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <line stroke-linecap="null" stroke-linejoin="null" id="svg_11" y2="360" x2="735" y1="359.90472" x1="225.85721" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="80.18384" y="230.4761" id="通知機關_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">通  知  機  關</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="72.5648" y="259.04752" id="通知機關_title" font-size="14" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">（原機密案件核定機關）</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="435" y="214.28563" id="通知機關發文日期_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">發文日期</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="435.4218" y="276.19037" id="通知機關發文字號_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">發文字號</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="82.0886" y="363.80939" id="原機密案件_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">原 機 密 案 件</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="275.42187" y="336.19035" id="原機密案件發文日期_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">發文日期</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="275" y="397.14271" id="原機密案件發文字號_title" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">發文字號</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="新等級或註銷_title" y="521" x="90.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">新等級或註銷</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="登記人_title" y="629" x="88.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">登   記   人</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="svg_29" y="626" x="236.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">職     稱：</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="svg_30" y="682" x="236" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">姓     名：</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="svg_32" y="742" x="236" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">日     期：</text>
+      <rect fill="none" stroke-width="null" fill-opacity="null" x="230.35039" y="183" width="162" height="110.99999" id="通知機關_boundary" stroke="#ffffff"/>
+      <rect id="通知機關發文日期_boundary" height="53" width="183" y="181" x="547.35039" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#ffffff" fill="none"/>
+      <rect fill="none" stroke="#ffffff" stroke-width="null" stroke-opacity="null" fill-opacity="null" x="548" y="242" width="183" height="53" id="通知機關發文字號_boundary"/>
+      <rect stroke="#ffffff" id="原機密案件發文日期_boundary" height="52" width="323" y="303" x="407.35039" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+      <rect stroke="#ffffff" id="原機密案件發文字號_boundary" height="50" width="323" y="364" x="408.35039" fill-opacity="null" stroke-opacity="null" stroke-width="null" fill="none"/>
+      <rect fill="none" stroke-width="null" stroke-opacity="null" fill-opacity="null" x="231.35039" y="425" width="500.00002" height="168.99999" id="新等級或註銷_boundary" stroke="#ffffff"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="29" id="機關名稱_title" y="103" x="164" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">機關名稱</text>
+      <rect stroke="#ffffff" id="機關名稱_boundary"  width="600" y="103" x="110" stroke-width="1.5" fill="none"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="通知機關" y="208" x="245.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">通知機關</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="通知機關發文日期" y="206" x="559.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">通知機關發文日期</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="通知機關發文字號" y="266" x="559.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">通知機關發文字號</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="原機密案件發文日期" y="327.90909" x="420.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">原機密案件發文日期</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="原機密案件發文字號" y="386.90909" x="421.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">原機密案件發文字號</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="新等級或註銷" y="451.81818" x="243.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">新等級或註銷</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="職稱" y="625.54545" x="350" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="姓名" y="681.54545" x="350" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="日期" y="741.54545" x="350" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000"/>
+    </g>
+  </g>
+</svg>

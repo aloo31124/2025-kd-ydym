@@ -1,0 +1,127 @@
+{
+  "id": "fd251b31-c436-4458-b377-4bc0cc0cf101",
+  "hash": "08c70f29de1582c65eac1e221f1bea51067cc5e6",
+  "js": [
+    {
+      "path": "kdconfig.js"
+    },
+    {
+      "path": "resources/js/custom.js"
+    },
+    {
+      "update": "delta",
+      "hash": "829740d1cece66c2de6292cf2bbd0c3c95c87d2c",
+      "path": "app.js"
+    },
+    {
+      "path": "resources/thirdparty/joint-0.9.7/lib/jquery.min.js"
+    },
+    {
+      "path": "resources/thirdparty/qtip/jquery.qtip.js"
+    },
+    {
+      "path": "resources/thirdparty/joint-0.9.7/lib/lodash.min.js"
+    },
+    {
+      "path": "resources/thirdparty/joint-0.9.7/lib/backbone-min.js"
+    },
+    {
+      "path": "resources/thirdparty/joint-0.9.7/dist/joint.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/browser.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/svgtransformlist.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/math.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/units.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/svgutils.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/sanitize.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/history.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/select.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/draw.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/path.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/lib/jgraduate/jquery.jgraduate.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/src/svgcanvas.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/lib/canvg/rgbcolor.js"
+    },
+    {
+      "path": "resources/thirdparty/method-draw/lib/canvg/canvg.js"
+    },
+    {
+      "path": "resources/thirdparty/jsSHA/src/sha1.js"
+    },
+    {
+      "path": "resources/thirdparty/resumablejs/resumable.js"
+    },
+    {
+      "path": "resources/thirdparty/xml2json/xml2json.js"
+    },
+    {
+      "path": "resources/thirdparty/xml2json/json2xml.js"
+    },
+    {
+      "path": "resources/thirdparty/Blob/Blob.js"
+    },
+    {
+      "path": "resources/thirdparty/FileSaver/FileSaver.js"
+    },
+    {
+      "path": "resources/thirdparty/JsBarcode/JsBarcode.js"
+    },
+    {
+      "path": "resources/thirdparty/JsBarcode/CODE128.js"
+    },
+    {
+      "path": "resources/thirdparty/fastdom/fastdom.min.js"
+    },
+    {
+      "path": "resources/thirdparty/localForage/dist/localforage.js"
+    },
+    {
+      "path": "resources/thirdparty/sqljs/js/sql.js"
+    }
+  ],
+  "css": [
+    {
+      "platform": [
+        "desktop",
+        "ios",
+        "android"
+      ],
+      "isSdk": true,
+      "path": "resources/css/sencha-touch.css"
+    },
+    {
+      "path": "resources/thirdparty/qtip/jquery.qtip.css"
+    },
+    {
+      "path": "resources/thirdparty/joint-0.9.7/dist/joint.css"
+    },
+    {
+      "path": "resources/css/custom.css"
+    }
+  ]
+}

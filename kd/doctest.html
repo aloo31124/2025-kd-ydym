@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--font-awesome-4.6.3-->
+    <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--html5 features the user’s browser has to offer-->
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style type="text/css">
+        TD {
+            font-size: 20px
+        }
+
+        TH {
+            font-size: 18px
+        }
+    </style>
+    <script type="text/javascript">
+        var user = {
+//            empNo: 'Elva',
+//            depNo: 'KDAU',
+//            roleId: '18',
+//            jobNo: 'KDAU99A',
+//            jobName: '科員',
+//            empName: '陳小竹'
+
+//            empNo: 'Elva',
+//            depNo: 'KDA1',
+//            roleId: '15',
+//            jobNo: '*KDA115',
+//            jobName: '主秘',
+//            empName: '陳小竹'
+
+            empNo: 'six',
+            depNo: 'KDBB',
+            roleId: '18',
+            jobNo: 'KDBB002',
+            jobName: '代理股長',
+            empName: '測試大六'
+
+//            empNo: 'six',
+//            depNo: 'KDAA',
+//            roleId: '02',
+//            jobNo: '*KDAA02',
+//            jobName: '康大資訊',
+//            empName: '陸致偉'
+
+//            empNo: 'GEAO063',
+//            depNo: 'GEAO',
+//            roleId: '18',
+//            jobNo: 'GEAA272',
+//            jobName: '股長',
+//            empName: '楊世鈺'
+
+//            empNo: 'Elva',
+//            depNo: 'KDAU',
+//            roleId: '18',
+//            jobNo: 'KDAU99A',
+//            jobName: '科員',
+//            empName: '陳小竹'
+
+//            empNo: 'six1',
+//            depNo: 'KDBB',
+//            roleId: '17',
+//            jobNo: 'KDBB003',
+//            jobName: '組長',
+//            empName: '測試自然人'
+
+//            empNo: 'wzas1',
+//            depNo: 'WZAS',
+//            roleId: '18',
+//            jobNo: 'WZASAAB',
+//            jobName: '承辦人',
+//            empName: '程六'
+
+//            empNo: 'jerry',
+//            depNo: 'KDBB',
+//            roleId: '18',
+//            jobNo: 'KDBB006',
+//            jobName: '承',
+//            empName: '大忻'
+
+//            empNo: 'ABAAAG000',
+//            depNo: 'AAAE',
+//            roleId: '15',
+//            jobNo: '*AAAE15',
+//            jobName: '張秘書長哲揚辦公室',
+//            empName: '洪淑霞'
+
+//            depNo: 'KDA1',
+//            roleId: '16',
+//            jobNo:'KDA1001',
+//            empNo: 'kda1001',
+//            jobName: '主秘',
+//            empName: '邱澤'
+
+//            empNo: 'ABAP074',
+//            depNo: 'ABAK',
+//            roleId: '18',
+//            jobNo: 'ABAA343',
+//            jobName: '專員',
+//            empName: '高瑾螢'
+
+//            empNo: 'kdacaaa',
+//            depNo: 'KDAC',
+//            roleId: '16',
+//            jobNo: 'KDAC222',
+//            jobName: '副局長',
+//            empName: '夏怡眺'
+
+//            empNo: 'kda1000',
+//            depNo: 'KDA1',
+//            roleId: '15',
+//            jobNo: '*KDA115',
+//            jobName: '主秘',
+//            empName: '戴安娜'
+
+//            empNo: 'kdacaaa',
+//            depNo: 'KDAC',
+//            roleId: '16',
+//            jobNo: 'KDAC222',
+//            jobName: '副局長',
+//            empName: '測試自然人5'
+
+//            empNo: 'kda1001',
+//            depNo: 'KDA1',
+//            roleId: '16',
+//            jobNo: 'KDA1001',
+//            jobName: '主秘',
+//            empName: '邱澤'
+
+//            empNo: 'GEAO043',
+//            depNo: 'GEAO',
+//            roleId: '18',
+//            jobNo: 'GEAA256',
+//            jobName: '承辦人',
+//            empName: '陳泰吉'
+
+//            empNo: 'jerry',
+//            depNo: 'KDBB',
+//            roleId: '18',
+//            jobNo: 'KDBB006',
+//            jobName: '承',
+//            empName: '測試自然人1'
+
+//            empNo: 'GEAO045',
+//            depNo: 'GEBG',
+//            roleId: '16',
+//            jobNo: 'GEAA475',
+//            jobName: '專門委員',
+//            empName: '鄭信一'
+        };
+        window.getCurrentUser = function () {
+            return user
+        };
+    </script>
+</head>
+
+<body class="no-skin">
+
+<!--banner-->
+<div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('navbar', 'fixed');
+        } catch (e) {
+        }
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+            <a href="" class="navbar-brand">
+                <small>
+                    <!--<img src="./assets/images/banner.png" height="24" class="img-rounded" alt="Cinque Terre">-->
+                    公文檔案管理系統(測試機)
+                </small>
+            </a>
+        </div>
+
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="grey">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-tasks bigger-140"></i>
+                        <span class="badge badge-grey bigger-140">3</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-check"></i>
+                            工作進度辦結率
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">普通件</span>
+                                            <span class="pull-right">65% (65/100)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:65%" class="progress-bar"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">速件</span>
+                                            <span class="pull-right">35% (35/100)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:35%" class="progress-bar progress-bar-warning"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">最速件</span>
+                                            <span class="pull-right">100% (2/2)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:100%" class="progress-bar progress-bar-danger"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="purple">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-bell icon-animated-bell bigger-140"></i>
+                        <span class="badge badge-important bigger-140">4</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-exclamation-triangle"></i>
+                            即時通知
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-exclamation-triangle"></i>
+														逾期通知
+													</span>
+                                            <span class="pull-right badge badge-info bigger-130">+12</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <i class="btn btn-xs btn-primary fa fa-folder-open"></i>
+                                        調案通知
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-television"></i>
+														電子公布欄
+													</span>
+                                            <span class="pull-right badge badge-success bigger-130">+8</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-flag"></i>
+														系統公告
+													</span>
+                                            <span class="pull-right badge badge-info bigger-130">+11</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#" class="bigger-130">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="green">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-envelope icon-animated-vertical bigger-140"></i>
+                        <span class="badge badge-success bigger-140">5</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-envelope-o"></i>
+                            5 筆訊息
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="inbox.html" class="bigger-130">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <span class="ace-icon fa fa-user bigger-180"></span>
+                        <span class="bigger-140" id="empName">王核主</span>
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="#" class="bigger-130">
+                                <i class="ace-icon fa fa-cog"></i>
+                                個人化設定
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="profile.html" class="bigger-130">
+                                <i class="ace-icon fa fa-user"></i>
+                                資訊
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#" class="bigger-130">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.navbar-container -->
+</div>
+
+<!--container-->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div id="sidebar" class="sidebar responsive">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+            <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                <button id="gotoCalendar" class="btn btn-success" type="button" title="日曆待辦" data-toggle="tooltip"
+                        data-placement="right">
+                    <i class="ace-icon fa fa-calendar bigger-140"></i>
+                </button>
+
+                <button id="gotoEditor" class="btn btn-info" type="button" title="創稿" data-toggle="tooltip"
+                        data-placement="right">
+                    <i class="ace-icon fa fa-pencil-square-o bigger-140"></i>
+                </button>
+
+                <button id="gotoQuery" class="btn btn-warning" type="button" title="綜合查詢" data-toggle="tooltip"
+                        data-placement="left">
+                    <i class="ace-icon fa fa-book bigger-140"></i>
+                </button>
+
+                <button class="btn btn-danger" type="button" title="設定" data-toggle="tooltip" data-placement="left">
+                    <i class="ace-icon fa fa-cog bigger-140"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                <span class="btn btn-success"></span>
+
+                <span class="btn btn-info"></span>
+
+                <span class="btn btn-warning"></span>
+
+                <span class="btn btn-danger"></span>
+            </div>
+        </div><!-- /.sidebar-shortcuts -->
+
+        <ul class="nav nav-list bigger-125">
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-home"></i>
+                    <span class="menu-text bigger-130"> 首頁 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+            <li class="active">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text bigger-130">
+								待辦案件
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="active">
+                        <a href="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待核判
+                            <span class="badge badge-primary">18</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待覆閱
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            受會待核判
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            表單核閱
+                            <span class="badge badge-primary">1</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-star-half-o"></i>
+							<span class="menu-text bigger-130">
+								已處理案件
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            對方未簽收
+                            <span class="badge badge-primary">1</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            未結案
+                            <span class="badge badge-primary">0</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待結案
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            已結案
+                            <span class="badge badge-primary">0</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-calculator"></i>
+							<span class="menu-text bigger-130">
+								承辦作業
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="" class="">
+                            <i class="menu-icon fa fa-book"></i>
+                            綜合查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            分類號查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            分類號查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿作業(線)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿作業(紙)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            紙本公文製作(公文製作)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿取號登記作業
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            發文群組資料維護
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            報表列印
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    承辦登記簿
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    歸檔文號清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    送文清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    展期清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    公文附件表單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    移交紀錄查詢及列印
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    機密公文封套列印
+                                </a>
+
+                                <b class="arrow"></b>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            電話錄案結案作業
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            上傳來文附件
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            會辦公文查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-book"></i>
+                    <span class="menu-text bigger-130"> 綜合查詢 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-bookmark"></i>
+                    <span class="menu-text bigger-130"> 全文檢索 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+        </ul><!-- /.nav-list -->
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"
+               data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'collapsed')
+            } catch (e) {
+            }
+        </script>
+    </div>
+
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">待辦案件</a>
+                    </li>
+                    <li class="active">待核判</li>
+                </ul><!-- /.breadcrumb -->
+                <form>
+                    <div class="nav-search" id="nav-search">
+                        <div class="input-group" style="width:200px;">
+					  <span class="input-icon">
+									<input type="text" placeholder="全文檢索" class="nav-search-input"
+                                           id="nav-search-input" autocomplete="off"
+                                           style="border-top-right-radius: 0!important;border-bottom-right-radius: 0!important;"/>
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+                            <span class="input-group-addon"
+                                  style="border-radius:4px!important;background:#6fb3e0!important;border-top-left-radius: 0!important;border-bottom-left-radius: 0!important;border: 1px solid #6fb3e0;width:308px"><i
+                                    class="fa fa-info"></i></span>
+                        </div>
+                    </div><!-- /.nav-search -->
+                </form>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="clearfix">
+                                    <div class="tableTools-container1">
+                                        <button style="display:none" class="btn btn-primary" classType="3">
+                                            <i class="ace-icon fa fa-file-word-o align-top bigger-125"></i>
+                                            退　　文
+                                        </button>
+                                        <button style="display:none" class="btn btn-success" classType="2">
+                                            <i class="ace-icon fa fa-files-o align-top bigger-125"></i>
+                                            決　　行
+                                        </button>
+                                        <button style="display:none" class="btn btn-danger" classType="2">
+                                            <i class="ace-icon fa fa-external-link"></i>
+                                            送陳／會
+                                        </button>
+                                        <div class="pull-right tableTools-container "></div>
+                                    </div>
+                                    <!--<div class="space-4"></div>-->
+                                    <hr style="margin: 8px 0;"/>
+                                </div>
+
+                                <!-- div.table-responsive -->
+
+                                <!-- div.dataTables_borderWrap -->
+                                <div>
+                                    <table id="dynamic-table" class="table table-striped table-bordered table-hover">
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="modal-table" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header no-padding">
+                                        <div class="table-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                <span class="white">&times;</span>
+                                            </button>
+                                            Results for "Latest Registered Domains
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-body no-padding">
+                                        <table class="table table-striped table-bordered table-hover no-margin-bottom no-border-top">
+                                            <thead>
+                                            <tr>
+                                                <th>Domain</th>
+                                                <th>Price</th>
+                                                <th>Clicks</th>
+
+                                                <th>
+                                                    <i class="ace-icon fa fa-clock-o bigger-110"></i>
+                                                    Update
+                                                </th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="#">ace.com</a>
+                                                </td>
+                                                <td>$45</td>
+                                                <td>3,330</td>
+                                                <td>Feb 12</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="#">base.com</a>
+                                                </td>
+                                                <td>$35</td>
+                                                <td>2,595</td>
+                                                <td>Feb 18</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="#">max.com</a>
+                                                </td>
+                                                <td>$60</td>
+                                                <td>4,400</td>
+                                                <td>Mar 11</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="#">best.com</a>
+                                                </td>
+                                                <td>$75</td>
+                                                <td>6,500</td>
+                                                <td>Apr 03</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="#">pro.com</a>
+                                                </td>
+                                                <td>$55</td>
+                                                <td>4,250</td>
+                                                <td>Jan 21</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="modal-footer no-margin-top">
+                                        <button class="btn btn-sm btn-danger pull-left" data-dismiss="modal">
+                                            <i class="ace-icon fa fa-times"></i>
+                                            Close
+                                        </button>
+
+                                        <ul class="pagination pull-right no-margin">
+                                            <li class="prev disabled">
+                                                <a href="#">
+                                                    <i class="ace-icon fa fa-angle-double-left"></i>
+                                                </a>
+                                            </li>
+
+                                            <li class="active">
+                                                <a href="#">1</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+
+                                            <li class="next">
+                                                <a href="#">
+                                                    <i class="ace-icon fa fa-angle-double-right"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+    <div id="my-modal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog" style="width:90%;">
+            <div id="modal-content" class="modal-content">
+                <div id="my-modal-body" class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+						<span class="bigger-120">
+							康大 &copy; 2015-2016
+						</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+<!--loading mask-->
+<script src="assets/js/vendor/jquery.blockUI.js"></script>
+<!--bootstrap-->
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/bootbox.min.js"></script>
+<!-- ace scripts -->
+<script src="assets/js/vendor/ace-elements.min.js"></script>
+<script src="assets/js/vendor/ace.min.js"></script>
+<!--Avoid `console` errors-->
+<script src="assets/js/plugins.js"></script>
+<!-- Custom -->
+<script src="assets/js/main.js"></script>
+
+<!-- DataTable Init -->
+<script src="assets/js/vendor/jquery.dataTables.min.js"></script>
+<script src="assets/js/vendor/dataTables.select.min.js"></script>
+<script src="assets/js/vendor/jquery.dataTables.bootstrap.min.js"></script>
+<script src="assets/js/vendor/dataTables.tableTools.min.js"></script>
+<script src="assets/js/vendor/dataTables.colVis.min.js"></script>
+
+<script src="assets/js/vendor/jquery-ui.min.js"></script>
+<script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
+
+<!-- 取得建立待辦案件清單-->
+<script type="text/javascript">
+
+    var speed = ["", "", "<font class='label label-warning'>速</font>", "<font class='label label-danger'>最</font>", ""];
+
+    var tablebbb;
+    jQuery(function ($) {
+        var dataSet = [];
+
+        $('#empName').text(user.empName);
+        var jobNo = user.jobNo;
+        var roleId = user.roleId;
+
+        var parts = location.search.substring(1).replace(/^\?/, '').split('&');
+        var qs = {};
+        for (var i = 0, ln = parts.length; i < ln; i++) {
+            var part = parts[i];
+            if (part.length > 0) {
+                var components = part.split('=');
+                qs[components[0]] = components[1];
+            }
+        }
+        qs.menu = qs.menu || 'wait';
+        qs.site = qs.site || 'doctest.gov.taipei';
+        var _urlDocflow = "https://" + qs.site + "/tcqb/rest/docflow/" + jobNo + '/?menuId=' + qs.menu + '&sort=newest&token=debug&page=1&start=0&limit=100';
+        _urlDocflow = _urlDocflow + "&roleId=" + roleId;
+        $.getJSON(_urlDocflow, function (data) {
+            var i = 0;
+            var _href = [];
+            $.each(data, function (key, val) {
+
+//                console.log(val);
+                //"dialogType":"1","docType":"C61","doSno":"1041234886","speed":"1","status1":"1","state":"來文待辦","depName":"綜合一組","gbDocflowId":"77","date":"104/12/24 15:04:20","folderId":"02","title":"推動公文電子認證機關自訂規則內容說明，請 查照。","status6":"1","status5":"0","rsvEndDate":"1050101","status4":"1","userId":"ed01","status2":"1","actionId":"0","user":"測試自然人1","roleId":"18"
+                var items = [];
+                items[0] = '<label class="pos-rel"><input type="checkbox" class="" value="' + val.gbDocflowId + '"/> <span class="lbl"></span></label>';
+                items[1] = ++i;
+
+//                _href = ['../oa/index.html?app=editor'];
+                _href = ['../oa/index.html?app=editor'];
+                _href.push("doSno=" + val.doSno);
+                _href.push("gbDocflowId=" + val.gbDocflowId);
+                _href.push("roleId=" + val.roleId);
+                _href.push("dialogType=" + val.dialogType);
+
+                var initEditorParas = {
+                    "empNo": val.userId,
+                    "doSno": val.doSno,
+                    "gbDocflowId": val.gbDocflowId,
+                    "roleId": val.roleId
+                };
+
+                var icon = "";
+                if (val.status4 == "2") {
+//                    icon += '	<a id="openEditor" class="green" href="' + _href.join('&') +'" target="_blank">';
+//                    if (i % 2 == 0) {
+//                        icon += '		<i class="ace-icon fa fa-pencil bigger-130 text-danger editor-in"></i>';
+//                    } else {
+                    icon += '		<i class="ace-icon fa fa-pencil bigger-130 text-danger editor-open"></i>';
+//                    }
+//                    icon += '<a href="#my-modal" role="button" class="ace-icon fa fa-pencil bigger-130 text-danger" data-toggle="modal"/>';
+
+                    items[13] = "1";
+                } else {
+                    items[13] = "2";
+                }
+
+                items[3] = val.state;
+
+                icon += speed[val.speed];
+
+                if (val.status1 == "1") {
+                    icon += "<span class='label label-darkgreen'>來</span>";
+                } else {
+                    icon += "<span class='label label-pink'>創</span>";
+                }
+
+                if (i == 1 || i == 5 || i == 10 || i == 13 || i == 17) {
+                    items[2] = '<i class="ace-icon fa fa-star bigger-130" style="color:#FFD500"></i>';
+                } else {
+                    items[2] = '<i class="ace-icon fa fa-star-o bigger-130 text-muted"></i>';
+                }
+
+                var _href2 = ['../oa/index.html?app=genpages'];
+                _href2.push("doSno=" + val.doSno);
+                _href2.push("gbDocflowId=" + val.gbDocflowId);
+                _href2.push("doDeptno=" + val.doDeptno);
+
+                items[4] = '<a href="' + _href2.join('&') + '" target="_blank">' + val.doSno + '</a><BR>' + icon;
+
+                items[5] = val.orgOtWord + val.orgOtWordno;
+                items[6] = val.ioDep3Name;
+                items[7] = val.sendDate;
+                items[8] = val.title;
+                items[9] = val.depName;
+                items[10] = val.user;
+                items[11] = val.date + "<BR><span class='blue'>" + val.rsvEndDate + "</span>";
+                items[12] = val.sendDep;
+                items[13] = _href.join('&');
+                items[14] = initEditorParas;
+                dataSet.push(items);
+            });
+
+            //initiate dataTables plugin
+            var oTable1 =
+                    $('#dynamic-table')
+                    //.wrap("<div class='dataTables_borderWrap' />")   //if you are applying horizontal scrolling (sScrollX)
+                            .dataTable({
+                                data: dataSet,
+                                dom: 'Bfrtip',
+                                bAutoWidth: false,
+                                select: true,
+                                "aaSorting": [],
+                                "columns": [
+                                    {
+                                        title: "<center><label class=\"pos-rel\"><input type=\"checkbox\" class=\"ace\"/><span class=\"lbl\"></span></label></center>",
+                                        bSortable: false
+                                    },
+                                    {title: "序號"},
+                                    {
+                                        title: "<i class=\"ace-icon fa fa-star bigger-130\" style=\"color:#FFD500\"></i>",
+                                        bSortable: false
+                                    },
+                                    {title: "狀態"},
+                                    {title: "公文文號", width: "160px"},
+                                    {title: "來文字號"},
+                                    {title: "來(受)文機關", width: "120px"},
+                                    {title: "送件日"},
+                                    {title: "主旨摘要"},
+                                    {title: "承辦單位"},
+                                    {title: "承辦人"},
+                                    {title: "收創日<br>限辦日"},
+                                    {title: "送件單位"},
+                                    {title: "線上紙本"}
+                                ],
+                                "oLanguage": {
+                                    "sProcessing": "處理中...",
+                                    "sLengthMenu": "顯示 _MENU_ 筆記錄",
+                                    "sZeroRecords": "無符合資料",
+                                    "sInfo": "目前記錄：_START_ 至 _END_, 總筆數：_TOTAL_",
+                                    "sInfoEmpty": "無任何資料",
+                                    "sInfoFiltered": "(過濾總筆數 _MAX_)",
+                                    "sInfoPostFix": "",
+                                    "sSearch": "過濾",
+                                    "sUrl": "",
+                                    "oPaginate": {
+                                        "sFirst": "首頁",
+                                        "sPrevious": "上頁",
+                                        "sNext": "下頁",
+                                        "sLast": "末頁"
+                                    }
+                                },
+                                "columnDefs": [
+                                    {
+                                        "targets": [1],
+                                        "visible": false
+                                    },
+                                    {
+                                        "targets": [3],
+                                        "visible": false
+                                    },
+                                    {
+                                        "targets": [5],
+                                        "visible": false
+                                    }, {
+                                        "targets": [7],
+                                        "visible": false
+                                    }, {
+                                        "targets": [9],
+                                        "visible": false
+                                    },
+                                    {
+                                        "targets": [10],
+                                        "visible": false
+                                    },
+                                    {
+                                        "targets": [12],
+                                        "visible": false
+                                    },
+                                    {
+                                        "targets": [13],
+                                        "visible": false
+                                    }
+                                ]
+                            });
+
+            tablebbb = $('#dynamic-table').DataTable();
+            //oTable1.fnAdjustColumnSizing();
+
+            //TableTools settings
+            TableTools.classes.container = "btn-group btn-overlap";
+            TableTools.classes.print = {
+                "body": "DTTT_Print",
+                "info": "tableTools-alert gritter-item-wrapper gritter-info gritter-center white",
+                "message": "tableTools-print-navbar"
+            };
+
+            //initiate TableTools extension
+            var tableTools_obj = new $.fn.dataTable.TableTools(oTable1, {
+                "sSwfPath": "assets/swf/copy_csv_xls_pdf.swf",
+                "sRowSelector": "td:not(:last-child)",
+                "sRowSelect": "multi",
+                "fnRowSelected": function (row) {
+                    //check checkbox when row is selected
+                    try {
+                        $(row).find('input[type=checkbox]').get(0).checked = true;
+                        changePaper(changePaperId);
+                    }
+                    catch (e) {
+                    }
+                },
+                "fnRowDeselected": function (row) {
+                    //uncheck checkbox
+                    try {
+                        $(row).find('input[type=checkbox]').get(0).checked = false;
+                        changePaper(changePaperId);
+                    }
+                    catch (e) {
+                    }
+                },
+
+                "sSelectedClass": "success",
+                "aButtons": [
+                    {
+                        "sExtends": "copy",
+                        "sToolTip": "字型",
+                        "sButtonClass": "btn btn-white btn-primary  btn-bold",
+                        "sButtonText": "<i class='fa fa-font bigger-125 grey'></i>",
+                        "fnClick": function () {
+                            var curSize = parseInt($('TD').css('font-size')) + 2;
+                            $('TD').css('font-size', curSize);
+                        }
+
+                    },
+                    {
+                        "sExtends": "print",
+                        "sToolTip": "列印預覽",
+                        "sButtonClass": "btn btn-white btn-primary  btn-bold",
+                        "sButtonText": "<i class='fa fa-print bigger-125 grey'></i>",
+
+//						"sMessage": "<div class='navbar navbar-default'><div class='navbar-header pull-left'><a class='navbar-brand' href='#'><small>Optional Navbar &amp; Text</small></a></div></div>",
+
+                        "sInfo": "<h3 class='no-margin-top'>Print view</h3>\
+										  <p>Please use your browser's print function to\
+										  print this table.\
+										  <br />Press <b>escape</b> when finished.</p>",
+                    }
+                ]
+            });
+
+            //we put a container before our table and append TableTools element to it
+//            $(tableTools_obj.fnContainer()).appendTo($('.tableTools-container'));
+
+            //also add tooltips to table tools buttons
+            //addding tooltips directly to "A" buttons results in buttons disappearing (weired! don't know why!)
+            //so we add tooltips to the "DIV" child after it becomes inserted
+            //flash objects inside table tools buttons are inserted with some delay (100ms) (for some reason)
+            setTimeout(function () {
+                $(tableTools_obj.fnContainer()).find('a.DTTT_button').each(function () {
+                    var div = $(this).find('> div');
+                    if (div.length > 0) div.tooltip({container: 'body'});
+                    else $(this).tooltip({container: 'body'});
+                });
+            }, 200);
+
+            //ColVis extension
+            var colvis = new $.fn.dataTable.ColVis(oTable1, {
+                "buttonText": "<i class='fa fa-filter'></i>",
+                "aiExclude": [0, 2, 13],
+                "bShowAll": true,
+                //            "bRestore": true,
+                "sAlign": "right",
+                "fnLabel": function (i, title, th) {
+                    return $(th).text();//remove icons, etc
+                }
+
+            });
+
+            //style it
+            $(colvis.button()).addClass('btn-group').find('button').addClass('btn btn-white btn-info btn-bold');
+
+            //and append it to our table tools btn-group, also add tooltip
+//            $(colvis.button())
+//                    .prependTo('.tableTools-container .btn-group')
+//                    .attr('title', '隱藏欄位').tooltip({container: 'body'});
+
+            var $label = $('#dynamic-table_filter > label');
+            $(tableTools_obj.fnContainer()).appendTo($label);
+            $(colvis.button())
+                    .appendTo($label)
+                    .attr('title', '隱藏欄位').tooltip({container: 'body'});
+
+            //and make the list, buttons and checkboxed Ace-like
+            $(colvis.dom.collection)
+                    .addClass('dropdown-menu dropdown-light dropdown-caret dropdown-caret-right')
+                    .find('li').wrapInner('<a href="javascript:void(0)" />') //'A' tag is required for better styling
+                    .find('input[type=checkbox]').addClass('ace').next().addClass('lbl padding-8');
+            /////////////////////////////////
+            //table checkboxes
+            $('th input[type=checkbox], td input[type=checkbox]').prop('checked', false);
+
+            //select/deselect all rows according to table header checkbox
+            $('#dynamic-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function () {
+
+                var th_checked = this.checked;//checkbox inside "TH" table header
+
+                $(this).closest('table').find('tbody > tr').each(function () {
+                    var row = this;
+                    if (th_checked) tableTools_obj.fnSelect(row);
+                    else tableTools_obj.fnDeselect(row);
+                });
+            });
+
+            //select/deselect a row when the checkbox is checked/unchecked
+            $('#dynamic-table').on('click', 'td input[type=checkbox]', function () {
+                var row = $(this).closest('tr').get(0);
+                if (!this.checked) tableTools_obj.fnSelect(row);
+                else tableTools_obj.fnDeselect($(this).closest('tr').get(0));
+            });
+
+
+            $('#dynamic-table').on('click', 'td i', function (e) {
+                var isSpaEditor = $(e.target).hasClass('editor-in');
+                var isOpenEditor = $(e.target).hasClass('editor-open');
+
+                if (isOpenEditor) {
+                    var rowData = tablebbb.row(this.parentNode).data();
+                    var newWin = window.open(rowData[13]);
+                    newWin.onbeforeunload = function () {
+                        console.log('new Window closed');
+                    };
+                }
+                if (isSpaEditor) $("#my-modal").modal("show");
+            });
+            $("#my-modal").on('show.bs.modal', function () {
+                var offset = 50;
+                $(this).find('.modal-body').attr('style', 'height:' + ($(window).height() - offset) + 'px !important;');
+                var oTT = $.fn.dataTable.TableTools.fnGetInstance('dynamic-table');
+                var aData = oTT.fnGetSelectedData();
+                if (aData.length > 0) window.OA.app.doEditor(aData[0][14]);
+            });
+            $("#my-modal").on('hide.bs.modal', function () {
+                console.log('modal closed');
+            });
+
+
+            $(document).on('click', '#dynamic-table .dropdown-toggle', function (e) {
+                e.stopImmediatePropagation();
+                e.stopPropagation();
+                e.preventDefault();
+            });
+
+            //And for the first simple table, which doesn't have TableTools or dataTables
+            //select/deselect all rows according to table header checkbox
+            var active_class = 'active';
+            $('#simple-table > thead > tr > th input[type=checkbox]').eq(0).on('click', function () {
+                var th_checked = this.checked;//checkbox inside "TH" table header
+
+                $(this).closest('table').find('tbody > tr').each(function () {
+                    var row = this;
+                    if (th_checked) $(row).addClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', true);
+                    else $(row).removeClass(active_class).find('input[type=checkbox]').eq(0).prop('checked', false);
+                });
+            });
+
+            //select/deselect a row when the checkbox is checked/unchecked
+            $('#simple-table').on('click', 'td input[type=checkbox]', function () {
+                var $row = $(this).closest('tr');
+                if (this.checked) $row.addClass(active_class);
+                else $row.removeClass(active_class);
+            });
+
+            /********************************/
+            //add tooltip for small view action buttons in dropdown menu
+            $('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+
+            //tooltip placement on right or left
+            function tooltip_placement(context, source) {
+                var $source = $(source);
+                var $parent = $source.closest('table');
+                var off1 = $parent.offset();
+                var w1 = $parent.width();
+
+                var off2 = $source.offset();
+                //var w2 = $source.width();
+
+                if (parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2)) return 'right';
+                return 'left';
+            }
+
+            //var title = '<h3 class="smaller lighter green pull-left">待辦案件清單&nbsp;&nbsp;&nbsp;</h3>';
+            var title = '<label class="lighter green pull-left">待辦案件清單&nbsp;&nbsp;&nbsp;</label>';
+            var online = '<div id="oneline" class="smaller btn-group btn-corner btn-xs pull-left"> <button value="" class="btn-xs">全　　　部</button> <button  value="1" class="btn-xs btn-danger">線　　　上</button> <button value="2" class="btn-xs btn-info">紙　　　本</button></div>';
+
+
+            $(title + online).insertBefore("#dynamic-table_filter > label");
+            // $(online).insertBefore( "#dynamic-table_filter > label" );
+
+            $('#dynamic-table_filter #oneline button').on('click', function (e) {
+                $('#dynamic-table_filter #oneline button').css("box-shadow", "inset 0 0 0 0px #3071A9");
+                $(e.target).css("box-shadow", "inset 0 0 0 2px #3071A9");
+                changePaper(e.target.value);
+            });
+            $('.tableTools-container1 button').css({"width": "150px", "font-size": "18px"});
+            $('#dynamic-table_filter #oneline button').css({"font-size": "14px", "width": "100px"});
+            $('#dynamic-table_filter label').css("font-size", "18px");
+            $('#dynamic-table_filter label input').css("width", "200px");
+//            $('#dynamic-table_length').append(online);
+//            $('#dynamic-table_filter').append(online);
+//			$('#dynamic-table_length').append('　　<input type="radio" name="paperModule" onclick="changePaper(\'\')">全部<input type="radio" name="paperModule" onclick="changePaper(1)">線上<input type="radio" name="paperModule" onclick="changePaper(2)">紙本');
+            changePaper('1');
+
+            var urlVal = getUrlVars();
+            if (urlVal["doSno"] != undefined) {
+                tablebbb.columns(4).search(urlVal["doSno"]).draw();
+            }
+
+//            $('.footer').scrollTo(1000);
+        });
+    });
+
+    var changePaperId = "1";
+
+    function changePaper(val) {
+        changePaperId = val;
+        if (val == "1") {
+            $('.tableTools-container1 button').each(function (e) {
+                if ($(this).attr("classType") == "1" || $(this).attr("classType") == "3")
+                    $(this).show();
+                else
+                    $(this).hide();
+            });
+        } else if (val == "2") {
+            $('.tableTools-container1 button').each(function (e) {
+                if ($(this).attr("classType") == "2" || $(this).attr("classType") == "3")
+                    $(this).show();
+                else
+                    $(this).hide();
+            });
+        } else {
+            $('.tableTools-container1 button').each(function (e) {
+                $('.tableTools-container1 button').show();
+            });
+        }
+        tablebbb.columns(13).search(val).draw();
+        var n = $("input:checked").length;
+        if (n >= 2) {
+            $('.tableTools-container1 button').each(function (e) {
+                if ($(this).attr("classType") == "4")
+                    $(this).show();
+            });
+        } else {
+            if ($(this).attr("classType") == "4")
+                $(this).hide();
+        }
+    }
+
+    $("#dialog-confirm").dialog({
+        autoOpen: false,
+        show: "blind",
+        hide: "explode"
+    });
+    /*$("#id-btn-dialog2").hover(function () {
+     $("#dialog-confirm").dialog('open');
+     }, function () {
+     $("#dialog-confirm").dialog('close');
+     }).mousemove(function (e) {
+     //$("#dialog-confirm").dialog("option", { position: [e.pageX, e.pageY+5] });
+     });*/
+    $("#sidebar-collapse").click();
+
+    function getUrlVars() {
+        var vars = [], hash;
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        for (var i = 0; i < hashes.length; i++) {
+            hash = hashes[i].split('=');
+            vars.push(hash[0]);
+            vars[hash[0]] = hash[1];
+        }
+        return vars;
+    }
+
+    $('#gotoEditor').click(function () {
+        window.open('../oa/index.html?app=editor&status=new', "", '');
+    });
+</script>
+
+<!--坎入製作-->
+<!--<script id="microloader" type="text/javascript" src="../assets/microloader/development.js"></script>-->
+
+<!--<script id="microloader" data-app="fd251b31-c436-4458-b377-4bc0cc0cf101" type="text/javascript">(function(k){function t(b){function c(a,b){var f=a.length,j,d;for(j=0;j<f;j++){d=a[j];var c=a,e=j,q=void 0;"string"==typeof d&&(d={path:d});d.shared?(d.version=d.shared,q=d.shared+d.path):(G.href=d.path,q=G.href,d.version=d.hash);d.uri=q;d.key=g+"-"+q;h[q]=d;c[e]=d;d.type=b;d.index=j;d.collection=a;d.ready=!1;d.evaluated=!1}return a}var f;"string"==typeof b?(f=b,b=H(f)):f=JSON.stringify(b);var g=b.id,e=g+"-"+I+r,h={};this.key=e;this.css=c(b.css,"css");this.js=c(b.js,"js");l.microloaded=!0;var n=window.Ext.filterPlatform=-->
+<!--function(a){function b(a){var d=/Mobile(\/|\s)/.test(a);return/(iPhone|iPod)/.test(a)||!/(Silk)/.test(a)&&/(Android)/.test(a)&&(/(Android 2)/.test(a)||d)||/(BlackBerry|BB)/.test(a)&&d||/(Windows Phone)/.test(a)}function f(a){return!b(a)&&(/iPad/.test(a)||/Android|Silk/.test(a)||/(RIM Tablet OS)/.test(a)||/MSIE 10/.test(a)&&/; Touch/.test(a))}var j=!1,d=navigator.userAgent,c,h;a=[].concat(a);c=window.location.search.substr(1).split("\x26");h={};var g;for(g=0;g<c.length;g++){var e=c[g].split("\x3d");-->
+<!--h[e[0]]=e[1]}if(c=h.platform)return-1!=a.indexOf(c);c=0;for(h=a.length;c<h;c++){switch(a[c]){case "phone":j=b(d);break;case "tablet":j=f(d);break;case "desktop":j=!b(d)&&!f(d);break;case "ios":j=/(iPad|iPhone|iPod)/.test(d);break;case "android":j=/(Android|Silk)/.test(d);break;case "blackberry":j=/(BlackBerry|BB)/.test(d);break;case "safari":j=/Safari/.test(d)&&!/(BlackBerry|BB)/.test(d);break;case "chrome":j=/Chrome/.test(d);break;case "ie10":j=/MSIE 10/.test(d);break;case "windows":j=/MSIE 10/.test(d)||-->
+<!--/Trident/.test(d);break;case "tizen":j=/Tizen/.test(d);break;case "firefox":j=/Firefox/.test(d)}if(j)return!0}return!1};this.css=this.css.filter(function(a){var b=a.platform,c=a.exclude;a.type="css";if(b){if(n(b)&&!n(c))return l.theme||(l.theme={}),l.theme.name||(l.theme.name=a.theme||"Default"),!0;a.filtered=!0;return!1}return!0});this.js=this.js.filter(function(a){var b=a.platform,c=a.exclude;a.type="js";return b&&(!n(b)||n(c))?(a.filtered=!0,!1):!0});this.assets=this.css.concat(this.js);this.getAsset=-->
+<!--function(a){return h[a]};this.store=function(){A(e,f)}}function B(b,c){var f=document.createElement("meta");f.setAttribute("name",b);f.setAttribute("content",c);p.appendChild(f)}function s(b,c,f){var g=new XMLHttpRequest;f=f||J;b=b+(-1==b.indexOf("?")?"?":"\x26")+Date.now();try{g.open("GET",b,!0),g.onreadystatechange=function(){if(4==g.readyState){var b=g.status,e=g.responseText;200<=b&&300>b||304==b||0==b&&0<e.length?c(e):f()}},g.send(null)}catch(e){f()}}function P(b,c){var f=m.createElement("iframe");-->
+<!--v.push({iframe:f,callback:c});f.src=b+".html";f.style.cssText="width:0;height:0;border:0;position:absolute;z-index:-999;visibility:hidden";m.body.appendChild(f)}function K(b,c,f){var g=!!b.shared;if(b.remote)if("js"===b.type){var g=b.uri,e=function(){c("")},h=document.createElement("script");h.src=g;h.type="text/javascript";h.charset="UTF-8";h.onerror=f;"addEventListener"in h?h.onload=e:"readyState"in h?h.onreadystatechange=function(){("loaded"===this.readyState||"complete"===this.readyState)&&e()}:-->
+<!--h.onload=e;p.appendChild(h)}else f=b.uri,g=document.createElement("link"),g.rel="stylesheet",g.href=f,p.appendChild(g),c("");else{if(!g&&b.version&&b.version.length){var n=c,a=b.version,z=a.length,u,j;c=function(d){j=d.substring(0,1);"/"==j?d.substring(2,z+2)!==a&&(u=!0):"f"==j?d.substring(10,z+10)!==a&&(u=!0):"."==j&&d.substring(1,z+1)!==a&&(u=!0);!0===u?confirm("Requested: '"+b.uri+" seems to have been changed. Attempt to refresh the application?")&&!L&&(L=!0,s(r,function(a){(new t(a)).store();-->
+<!--k.location.reload()})):n(d)}}(g?P:s)(b.uri,c,f)}}function M(b){var c=b.data;b=b.source.window;var f,e,l,h;f=0;for(e=v.length;f<e;f++)if(l=v[f],h=l.iframe,h.contentWindow===b){l.callback(c);m.body.removeChild(h);v.splice(f,1);break}}function C(b){"undefined"!=typeof console&&(console.error||console.log).call(console,b)}function A(b,c){try{w.setItem(b,c)}catch(f){w&&(f.code==f.QUOTA_EXCEEDED_ERR&&D)&&C("LocalStorage Quota exceeded, cannot store "+b+" locally")}}function x(b){try{return w.getItem(b)}catch(c){return null}}-->
+<!--function E(b){function c(a,b){var c=a.collection,j=a.index,d=c.length,e;a.ready=!0;a.content=b;for(e=j-1;0<=e;e&#45;&#45;)if(a=c[e],!a.filtered&&(!a.ready||!a.evaluated))return;for(e=j;e<d;e++)if(a=c[e],a.ready)a.evaluated||f(a);else break}function f(a){a.evaluated=!0;if("js"==a.type)try{a.content=a.content+"\n//# sourceURL\x3d"+a.uri+"\n",eval.call(window,a.content)}catch(b){C("Error evaluating "+a.uri+" with message: "+b)}else{var c=m.createElement("style"),e;c.type="text/css";a.content=a.content+"\n/*# sourceURL\x3d"+-->
+<!--a.uri+" */\n";c.textContent=a.content;"id"in a&&(c.id=a.id);"disabled"in a&&(c.disabled=a.disabled);e=document.createElement("base");e.href=a.path.replace(/\/[^\/]*$/,"/");p.appendChild(e);p.appendChild(c);p.removeChild(e)}delete a.content;0==&#45;&#45;h&&g()}function g(){function a(){h&&c()}function c(){var a=l.onUpdated||J;if("onSetup"in l)l.onSetup(a);else a()}function f(){n.store();g.forEach(function(a){A(a.key,a.content)});c()}function j(a,b){a.content=b;0==&#45;&#45;p&&(e.status==e.IDLE?f():k=f)}function d(){N("online",-->
+<!--d,!1);s(r,function(c){D=n=new t(c);var d;n.assets.forEach(function(a){d=b.getAsset(a.uri);(!d||a.version!==d.version)&&g.push(a)});p=g.length;0==p?e.status==e.IDLE?a():k=a:g.forEach(function(a){function c(){K(a,function(b){j(a,b)})}var d=b.getAsset(a.uri),e=a.path,f=a.update;!d||!f||null===x(a.key)||"delta"!=f?c():s("deltas/"+e+"/"+d.version+".json",function(b){try{var c=a,d;var e=x(a.key),f=H(b);b=[];var g,h,k;if(0===f.length)d=e;else{h=0;for(k=f.length;h<k;h++)g=f[h],"number"===typeof g?b.push(e.substring(g,-->
+<!--g+f[++h])):b.push(g);d=b.join("")}j(c,d)}catch(l){C("Malformed delta content received for "+a.uri)}},c)})})}var g=[],h=!1,k=function(){},m=function(){e.swapCache();h=!0;k()},p;N("message",M,!1);if(e.status==e.UPDATEREADY)m();else if(e.status==e.CHECKING||e.status==e.DOWNLOADING)e.onupdateready=m,e.onnoupdate=e.onobsolete=function(){k()};!1!==navigator.onLine?d():F("online",d,!1)}var k=b.assets,h=k.length,n;D=b;F("message",M,!1);0==h?g():k.forEach(function(a){var b=x(a.key);null===b?K(a,function(b){a.remote||-->
+<!--A(a.key,b);c(a,b)},function(){c(a,"")}):c(a,b)})}function O(b){if(navigator.userAgent.match(/IEMobile\/10\.0/)){var c=document.createElement("style");c.appendChild(document.createTextNode("@media screen and (orientation: portrait) {@-ms-viewport {width: 320px !important;}}@media screen and (orientation: landscape) {@-ms-viewport {width: 560px !important;}}"));document.getElementsByTagName("head")[0].appendChild(c)}c=/MSIE 10/.test(navigator.userAgent)?/complete|loaded/:/interactive|complete|loaded/;-->
+<!--null!==m.readyState.match(c)?E(b):F("DOMContentLoaded",function(){navigator.standalone?setTimeout(function(){setTimeout(function(){E(b)},1)},1):setTimeout(function(){E(b)},1)},!1)}var J=function(){},v=[],m=k.document,p=m.head||m.getElementsByTagName("head")[0],F=k.addEventListener,N=k.removeEventListener,H=JSON.parse,G=m.createElement("a"),y=m.location,I=y.protocol+"//"+y.hostname+y.pathname+y.search,r="app.json",L=!1,D,e,w;try{w=k.localStorage,e=k.applicationCache}catch(Q){}if("undefined"===typeof k.Ext)var l=-->
+<!--k.Ext={};l.blink=function(b){var c=x(b.id+"-"+I+r);B("viewport","width\x3ddevice-width, initial-scale\x3d1.0, maximum-scale\x3d1.0, minimum-scale\x3d1.0, user-scalable\x3dno");B("apple-mobile-web-app-capable","yes");B("apple-touch-fullscreen","yes");c?(b=new t(c),O(b)):s(r,function(c){b=new t(c);b.store();O(b)})}})(this);Ext.blink({id:"fd251b31-c436-4458-b377-4bc0cc0cf101"});</script>-->
+
+</body>
+
+</html>

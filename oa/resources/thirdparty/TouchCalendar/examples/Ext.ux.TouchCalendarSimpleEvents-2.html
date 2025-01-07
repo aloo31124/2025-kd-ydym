@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="../lib/sencha/resources/css/sencha-touch.css" media="all"/>
+        <script src="../lib/sencha/sencha-touch-debug.js" type="text/javascript">
+        </script>
+
+        <link rel="stylesheet" type="text/css" href="../resources/css/Ext.ux.TouchCalendarView.css" media="all"/>
+        <link rel="stylesheet" type="text/css" href="../resources/css/skin1.css" media="all"/>
+        <script src="../Ext.ux.TouchCalendar.js" type="text/javascript"></script>
+		<script src="../Ext.ux.TouchCalendarView.js" type="text/javascript"></script>
+		
+		<script src="../Ext.ux.TouchCalendarSimpleEvents/Ext.ux.TouchCalendarSimpleEvents.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="../Ext.ux.TouchCalendarSimpleEvents/resources/css/Ext.ux.TouchCalendarSimpleEvents.css" media="all"/>
+		
+		<script src="EventStore.js" type="text/javascript"></script>
+				
+        <script type="text/javascript">
+            
+            Ext.setup({
+                onReady: function(){
+
+                    
+                    var calendar = new Ext.ux.TouchCalendar({
+                        fullscreen: true,
+                        viewMode: 'month',
+                        items: [
+                            {
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                items: [{
+                                    xtype: 'button',
+                                    text: 'Month View',
+                                    handler: function(){
+                                        calendar.setViewMode('month');
+                                    }
+                                }, {
+                                    xtype: 'button',
+                                    text: 'Week View',
+                                    handler: function(){
+                                        calendar.setViewMode('week');
+                                    }
+                                }]
+                            }
+                        ],
+                        viewMode: 'month',
+                        
+                        enableSwipeNavigate: true,
+                        enableSimpleEvents: true,
+                        
+                        viewConfig: {
+							weekStart: 0,
+							eventStore: eventStore
+						}
+                    });
+					
+                }
+                
+                
+            });
+        </script>
+        <title></title>
+    </head>
+    <body>
+    </body>
+</html>

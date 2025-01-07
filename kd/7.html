@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title></title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--font-awesome-4.6.3-->
+    <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--html5 features the user’s browser has to offer-->
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style type="text/css">
+        TD {
+            font-size: 20px
+        }
+
+        TH {
+            font-size: 18px
+        }
+    </style>
+</head>
+
+<body class="no-skin">
+
+<!--container-->
+<div class="main-container" id="main-container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="widget-box">
+                <div class="widget-header">
+                    <h4 class="widget-title">介接測試</h4>
+
+                    <div class="widget-toolbar">
+                        <a href="#" data-action="collapse">
+                            <i class="ace-icon fa fa-chevron-up"></i>
+                        </a>
+
+                        <a href="#" data-action="close">
+                            <i class="ace-icon fa fa-times"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="widget-body" style="display: block;">
+                    <div class="widget-main">
+                        <div>
+                            <textarea class="form-control" id="input" rows="10"></textarea>
+                        </div>
+
+                        <hr>
+                        <button id="butCheck" class="btn btn-success" type="button">
+                            <i>查詢</i>
+                        </button>
+                        <button id="butByreturn" class="btn btn-success" type="button">
+                            <i>函覆</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.span -->
+    </div>
+</div><!-- /.main-container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+<!--loading mask-->
+<script src="assets/js/vendor/jquery.blockUI.js"></script>
+<!--bootstrap-->
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/bootbox.min.js"></script>
+<!-- ace scripts -->
+<script src="assets/js/vendor/ace-elements.min.js"></script>
+<script src="assets/js/vendor/ace.min.js"></script>
+<!--Avoid `console` errors-->
+<script src="assets/js/plugins.js"></script>
+<!-- Custom -->
+<script src="assets/js/main.js"></script>
+
+<!-- DataTable Init -->
+<script src="assets/js/vendor/jquery.dataTables.min.js"></script>
+<script src="assets/js/vendor/dataTables.select.min.js"></script>
+<script src="assets/js/vendor/jquery.dataTables.bootstrap.min.js"></script>
+<script src="assets/js/vendor/dataTables.tableTools.min.js"></script>
+<script src="assets/js/vendor/dataTables.colVis.min.js"></script>
+
+<script src="assets/js/vendor/jquery-ui.min.js"></script>
+<script src="assets/js/vendor/jquery.ui.touch-punch.min.js"></script>
+
+<!-- 取得建立待辦案件清單-->
+<script type="text/javascript">
+
+    var initData = {
+//        empNo: 'six',
+//        depNo: 'KDBB',
+//        roleId: '18',
+//        jobNo: 'KDBB002',
+//        doDeptno:'KDAA',
+//        doSno: 1063000306
+
+
+//        empNo: 'GEAQ062',
+////        depNo: 'GEAO',
+//        depNo: 'GEAA',
+//        roleId: '18',
+//        jobNo: 'GEAA207',
+//        jobName: '承辦人',
+//        empName: '李正賢',
+//        doSno: 1067000288
+
+//        empNo: 'GEAQ077',
+//        depNo: 'GEAQ',
+//        roleId: '18',
+//        jobNo: 'GEAA353',
+//        jobName: '承辦人',
+//        empName: '江玄宏',
+//        doSno: 1062001026,
+//        doDeptno:'AAAA'
+
+        empNo: 'GEAO047',
+        depNo: 'GEAA',
+        roleId: '19',
+        jobNo: '*GEAA19',
+        jobName: '資訊局',
+        empName: '陳姿吟',
+        doSno: 1067001151,
+        doDeptno:'AAAA'
+    };
+    document.getElementById('input').innerHTML = JSON.stringify(initData, undefined, 4);
+
+    function getInitParas(){
+        var ret =JSON.parse($('#input').val());
+        window.getCurrentUser = function () {
+            return ret
+        };
+        return ret;
+    }
+    $('#butCheck').click(function () {
+        var data =getInitParas();
+        var _href = ['../oa/index.html?app=check'];
+        _href.push("doSno=" + data.doSno);
+        _href.push("doDeptno=" + data.doDeptno);
+        _href.push("dialogType=" + '3');
+
+        window.open(_href.join('&'), '', '');
+    });
+    $('#butByreturn').click(function () {
+        var data =getInitParas();
+        var _href = ['../oa/index.html?dialogType=4'];
+        _href.push("doSno=" + data.doSno);
+        _href.push("doDeptno=" + data.doDeptno);
+        window.open(_href.join('&'), '', '');
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<svg width="793.7007874015749" height="1222.51969" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[text {  font-family:BiauKai,標楷體;}@media print{  .pageInterval { display: none; }  .gutterMargin { opacity: 1; }  .canvasMargin { display: none; }}]]>
+  </style>
+
+  <g class="gBackground">
+    <title></title>
+    <rect x="-1" y="-1" width="795.70079" height="1224.51969" id="canvas_background" fill="#ffffff"/>
+    <g id="canvas_gutter_1" class="gGutter">
+      <line x1="37.79528" y1="37.79528" x2="37.79528" y2="1065.82677" stroke="black" stroke-dasharray="5,5" class="gutterMargin" id="svg_1"/>
+      <text font-size="12" x="31.79528" y="277.62992" class="gutterMargin" id="svg_2" stroke-dasharray="5,5">裝</text>
+      <text font-size="12" x="31.79528" y="555.25984" class="gutterMargin" id="svg_3" stroke-dasharray="5,5">訂</text>
+      <text font-size="12" x="31.79528" y="832.88976" class="gutterMargin" id="svg_4" stroke-dasharray="5,5">線</text>
+    </g>
+    <rect id="canvas_margin" x="75.59055" y="75.59055" width="585.82677" height="933.54331" class="canvasMargin" fill=" none" stroke-dasharray=" 10 5" stroke-width="0" stroke="#009900"/>
+    <rect id="canvas_interval_1" x="0" y="1122.51969" width="793.70079" height="7.55906" fill="null" class="pageInterval"/>
+    <text id="canvas_page_1" font-size="16" x="325.50394" y="1053.13386" class="canvasPage">第1頁，共1頁</text>
+  </g>
+  <g>
+    <title></title>
+    <g id="svg_31" class="gContent">
+      <rect stroke="#000" fill="none" stroke-opacity="null" fill-opacity="null" x="83" y="100.99991" width="660" height="780.22223" id="svg_6"/>
+      <line stroke="#000" fill="none" stroke-opacity="null" fill-opacity="null" x1="333" y1="102.00003" x2="333" y2="880" id="svg_8" stroke-linejoin="null" stroke-linecap="null"/>
+      <line fill="none" stroke="#000" stroke-opacity="null" fill-opacity="null" x1="83.68373" y1="230" x2="743.33334" y2="230" id="svg_9" stroke-linejoin="null" stroke-linecap="null"/>
+      <line fill="none" stroke="#000" stroke-opacity="null" fill-opacity="null" x1="82" y1="400" x2="742.33334" y2="400" id="svg_18" stroke-linejoin="null" stroke-linecap="null"/>
+      <line fill="none" stroke="#000" stroke-opacity="null" fill-opacity="null" x1="82.33333" y1="530" x2="742" y2="530" id="svg_19" stroke-linejoin="null" stroke-linecap="null"/>
+      <line stroke="#000" fill="none" stroke-opacity="null" fill-opacity="null" x1="82" y1="660" x2="744" y2="660" id="svg_20" stroke-linejoin="null" stroke-linecap="null"/>
+      <line fill="none" stroke="#000" stroke-opacity="null" fill-opacity="null" x1="82.33333" y1="760" x2="742" y2="760" id="svg_21" stroke-linejoin="null" stroke-linecap="null"/>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_15" y="902.33333" x="86" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">說明：</text>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_23" y="922.33333" x="114.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">一、本格式以A4 70磅以上模造紙或再生紙印製。</text>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_24" y="942.33333" x="114" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">二、裝訂成冊後另將下列文字印刷於封面內頁：</text>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_25" y="963.33333" x="114" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">（一）各機關間凡公務上聯繫、洽詢、通知等可以簡單正確說明的事項，均可以使用本紀錄。</text>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_26" y="984" x="114" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">（二）本紀錄發(受)話人認有必要時，複寫2份，以1份送達受(發)話人。</text>
+      <text stroke="null" xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="15" id="svg_27" y="1004" x="114" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">（三）本紀錄發話、受話雙方均應附卷存檔，以供查考。</text>
+      <text font-size="20" y="82" x="236" id="content" xml:space="preserve"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="29" id="機關名稱_title" y="66" x="140.53461" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">機關名稱</text>
+      <rect fill="none" stroke="#ffffff" stroke-width="null" fill-opacity="null" x="105.3504" y="45" width="610" height="52" id="機關名稱_boundary"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="協調事項_title" y="172" x="128.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">協  調  事  項</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="通話內容_title" y="304" x="131.35039" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">發 (受) 話  人</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="131.35039" y="338" id="通話內容_title" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">通  話  內  容</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="發話人_title" y="435" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">發    話    人</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="發話人_title" y="462" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">單          位</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="發話人_title" y="486" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">職          稱</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="發話人_title" y="510" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">姓          名</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="受話人_title" y="566" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">受    話    人</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="受話人_title" y="593" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">單          位</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="受話人_title" y="617" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">職          稱</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="22" id="受話人_title" y="640" x="131" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">姓          名</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="128.35039" y="719" id="通話時間_title" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">通  話  時  間</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="128.35039" y="828" id="備註_title" font-size="22" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">備          註</text>
+      <rect fill="none" stroke="#ffffff" stroke-width="null" fill-opacity="null" x="340.35039" y="104" width="396" height="121" id="協調事項_boundary"/>
+      <text fill="#000000" stroke="#ffffff" stroke-width="0" fill-opacity="null" x="351.35039" y="128" id="協調事項" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">協調事項</text>
+      <rect fill="none" stroke="#ffffff" stroke-width="null" fill-opacity="null" x="337.35039" y="235" width="400" height="160" id="通話內容_boundary"/>
+      <text fill="#000000" stroke="#ffffff" stroke-width="0" fill-opacity="null" x="350.35039" y="257" id="通話內容" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">通話內容</text>
+      <rect fill="none" stroke-width="null" fill-opacity="null" x="339.35039" y="665" width="396" height="90" id="通話時間_boundary" stroke="#ffffff"/>
+      <text fill="#000000" stroke="#ffffff" stroke-width="0" fill-opacity="null" x="352" y="719" id="通話時間" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">通話時間</text>
+      <rect fill="none" stroke="#ffffff" stroke-width="null" fill-opacity="null" x="338.35039" y="766" width="400" height="110" id="備註_boundary"/>
+      <text fill="#000000" stroke="#ffffff" stroke-width="0" fill-opacity="null" x="352" y="790" id="備註" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve">備註</text>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350" y="462" id="發話人單位" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350" y="485.99999" id="發話人職稱" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350" y="510" id="發話人姓名" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350" y="593" id="受話人單位" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350.3504" y="617" id="受話人職稱" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+      <text fill="#000000" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="350" y="640" id="受話人姓名" font-size="20" font-family="Helvetica, Arial, sans-serif" text-anchor="start" xml:space="preserve"/>
+    </g>
+  </g>
+</svg>

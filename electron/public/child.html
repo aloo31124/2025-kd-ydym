@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+
+<h1> do sign page </h1>
+<script type="text/javascript" src="postmate.min.js"></script>
+<script type="text/javascript">
+    var parentAPI = null;
+    var doValidate = function () {
+//        console.log(parentAPI.model);
+        setTimeout(function () {
+            parentAPI.emit('validated', {success: true, version: parentAPI.model.version});
+        }, 200);
+    };
+
+    new Postmate.Model({doValidate: doValidate})
+            .then(function (parent) {
+                parentAPI = parent;
+            });
+</script>
+</body>
+</html>

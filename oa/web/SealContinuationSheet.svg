@@ -1,0 +1,33 @@
+<svg width="793.7007874015749" height="1222.51969" xmlns="http://www.w3.org/2000/svg">
+  <style type="text/css">
+    <![CDATA[text {  font-family:BiauKai,標楷體;}@media print{  .pageInterval { display: none; }  .gutterMargin { opacity: 1; }  .canvasMargin { display: none; }}]]>
+  </style>
+
+  <g stroke="null" class="gBackground">
+    <title></title>
+    <rect stroke="null" fill="#ffffff" id="canvas_background" height="1224.51969" width="795.70079" y="-1" x="-1"/>
+    <g stroke="null" class="gGutter" id="canvas_gutter_1"/>
+    <rect stroke="#009900" stroke-width="0" stroke-dasharray=" 10 5" fill=" none" class="canvasMargin" height="933.54331" width="585.82677" y="75.59055" x="75.59055" id="canvas_margin"/>
+    <rect stroke="null" class="pageInterval" fill="null" height="7.55906" width="793.70079" y="1122.51969" x="0" id="canvas_interval_1"/>
+  </g>
+  <g stroke="null">
+    <title></title>
+    <g stroke="null" class="gContent" id="svg_31">
+      <rect id="svg_6" height="653" width="660" y="375.99996" x="76.29814" fill-opacity="null" stroke-opacity="null" fill="none" stroke="#000"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="18" id="svg_1" y="1053.27271" x="81.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">說明：二以上機關之會銜公文用印時，得依本表蓋用。</text>
+      <line stroke="#000" stroke-dasharray="5,5" stroke-linecap="null" stroke-linejoin="null" id="svg_2" y2="1029" x2="404" y1="378" x1="404" fill-opacity="null" stroke-opacity="null" stroke-width="NaN" fill="none"/>
+      <line fill="none" stroke="#000" stroke-width="null" stroke-opacity="null" fill-opacity="null" x1="76.3504" y1="595" x2="737.3504" y2="595" id="svg_3" stroke-linejoin="null" stroke-linecap="null" stroke-dasharray="5,5"/>
+      <line fill="none" stroke="#000" stroke-width="null" stroke-opacity="null" fill-opacity="null" x1="76.3504" y1="812" x2="737.3504" y2="812" id="svg_4" stroke-linejoin="null" stroke-linecap="null" stroke-dasharray="5,5"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="26" id="svg_5" y="126" x="223.86369" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">會銜公文機關印信蓋用續頁表</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="發文日期_title" y="229" x="89.3504" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">發文日期：</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="會銜發文字號_title" y="276" x="89" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">發文字號：</text>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="會銜主旨_title" y="328" x="89" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">主    旨：</text>
+      <rect stroke="#ffffff" fill="none" stroke-width="null" fill-opacity="null" x="188.3504" y="211" width="411" height="27" id="發文日期_boundary"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="發文日期" y="227" x="196.3504" fill-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">發文日期</text>
+      <rect stroke="#ffffff" id="會銜發文字號_boundary" height="29" width="401" y="258" x="188" fill-opacity="null" stroke-width="null" fill="none"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="會銜發文字號" y="275" x="196" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#ffffff" fill="#000000">發文字號</text>
+      <rect stroke="#ffffff" id="會銜主旨_boundary" height="79" width="523" y="283" x="187" fill-opacity="null" stroke-width="null" fill="none"/>
+      <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="20" id="會銜主旨" y="328" x="196" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000" stroke="#ffffff">主旨</text>
+    </g>
+  </g>
+</svg>

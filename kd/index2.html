@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--font-awesome-4.6.3-->
+    <link rel="stylesheet" href="assets/font-awesome-4.6.3/css/font-awesome.min.css"/>
+    <!-- ace styles -->
+    <link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style"/>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--html5 features the user’s browser has to offer-->
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style type="text/css">
+        TD {
+            font-size: 20px
+        }
+
+        TH {
+            font-size: 18px
+        }
+        .form-group input {
+            font-size: 18px;
+        }
+        .tableTools-container1 button {
+            width: 150px;
+            font-size: 18px
+        }
+    </style>
+</head>
+
+<body class="no-skin">
+
+<!--banner-->
+<div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('navbar', 'fixed');
+        } catch (e) {
+        }
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <div class="navbar-header pull-left">
+            <a href="" class="navbar-brand">
+                <small>
+                    <!--<img src="./assets/images/banner.png" height="24" class="img-rounded" alt="Cinque Terre">-->
+                    公文檔案管理系統
+                </small>
+            </a>
+        </div>
+
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="grey">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-tasks bigger-140"></i>
+                        <span class="badge badge-grey bigger-140">3</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-check"></i>
+                            工作進度辦結率
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">普通件</span>
+                                            <span class="pull-right">65% (65/100)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:65%" class="progress-bar"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">速件</span>
+                                            <span class="pull-right">35% (35/100)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:35%" class="progress-bar progress-bar-warning"></div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <div class="clearfix bigger-130">
+                                            <span class="pull-left">最速件</span>
+                                            <span class="pull-right">100% (2/2)</span>
+                                        </div>
+
+                                        <div class="progress progress-mini">
+                                            <div style="width:100%" class="progress-bar progress-bar-danger"></div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="purple">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-bell icon-animated-bell bigger-140"></i>
+                        <span class="badge badge-important bigger-140">4</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-exclamation-triangle"></i>
+                            即時通知
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-pink fa fa-exclamation-triangle"></i>
+														逾期通知
+													</span>
+                                            <span class="pull-right badge badge-info bigger-130">+12</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <i class="btn btn-xs btn-primary fa fa-folder-open"></i>
+                                        調案通知
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-success fa fa-television"></i>
+														電子公布欄
+													</span>
+                                            <span class="pull-right badge badge-success bigger-130">+8</span>
+                                        </div>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="bigger-130">
+                                        <div class="clearfix">
+													<span class="pull-left">
+														<i class="btn btn-xs no-hover btn-info fa fa-flag"></i>
+														系統公告
+													</span>
+                                            <span class="pull-right badge badge-info bigger-130">+11</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="#" class="bigger-130">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="green">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">&nbsp;&nbsp;
+                        <i class="ace-icon fa fa-envelope icon-animated-vertical bigger-140"></i>
+                        <span class="badge badge-success bigger-140">5</span>&nbsp;&nbsp;
+                    </a>
+
+                    <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                        <li class="dropdown-header bigger-140">
+                            <i class="ace-icon fa fa-envelope-o"></i>
+                            5 筆訊息
+                        </li>
+
+                        <li class="dropdown-content">
+                            <ul class="dropdown-menu dropdown-navbar">
+
+                            </ul>
+                        </li>
+
+                        <li class="dropdown-footer">
+                            <a href="inbox.html" class="bigger-130">
+                                查看更多細節
+                                <i class="ace-icon fa fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <span class="ace-icon fa fa-user bigger-180"></span>
+                        <span class="bigger-140">王核主</span>
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="#" class="bigger-130">
+                                <i class="ace-icon fa fa-cog"></i>
+                                個人化設定
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="profile.html" class="bigger-130">
+                                <i class="ace-icon fa fa-user"></i>
+                                資訊
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#" class="bigger-130">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                登出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div><!-- /.navbar-container -->
+</div>
+
+<!--container-->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div id="sidebar" class="sidebar responsive">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+            <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                <button id="gotoCalendar" class="btn btn-success" type="button" title="日曆待辦" data-toggle="tooltip"
+                        data-placement="right">
+                    <i class="ace-icon fa fa-calendar bigger-140"></i>
+                </button>
+
+                <button id="gotoEditor" class="btn btn-info" type="button" title="創稿" data-toggle="tooltip"
+                        data-placement="right">
+                    <i class="ace-icon fa fa-pencil-square-o bigger-140"></i>
+                </button>
+
+                <button id="gotoQuery" class="btn btn-warning" type="button" title="綜合查詢" data-toggle="tooltip"
+                        data-placement="left">
+                    <i class="ace-icon fa fa-book bigger-140"></i>
+                </button>
+
+                <button class="btn btn-danger" type="button" title="設定" data-toggle="tooltip" data-placement="left">
+                    <i class="ace-icon fa fa-cog bigger-140"></i>
+                </button>
+            </div>
+
+            <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                <span class="btn btn-success"></span>
+
+                <span class="btn btn-info"></span>
+
+                <span class="btn btn-warning"></span>
+
+                <span class="btn btn-danger"></span>
+            </div>
+        </div><!-- /.sidebar-shortcuts -->
+
+        <ul class="nav nav-list bigger-125">
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-home"></i>
+                    <span class="menu-text bigger-130"> 首頁 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+            <li class="active">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+							<span class="menu-text bigger-130">
+								待辦案件
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="active">
+                        <a href="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待核判
+                            <span class="badge badge-primary">18</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待覆閱
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            受會待核判
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            表單核閱
+                            <span class="badge badge-primary">1</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-star-half-o"></i>
+							<span class="menu-text bigger-130">
+								已處理案件
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            對方未簽收
+                            <span class="badge badge-primary">1</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            未結案
+                            <span class="badge badge-primary">0</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            待結案
+                            <span class="badge badge-primary">3</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            已結案
+                            <span class="badge badge-primary">0</span>
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-calculator"></i>
+							<span class="menu-text bigger-130">
+								承辦作業
+							</span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="" class="">
+                            <i class="menu-icon fa fa-book"></i>
+                            綜合查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            分類號查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            分類號查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿作業(線)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿作業(紙)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            紙本公文製作(公文製作)
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            創簽稿取號登記作業
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            發文群組資料維護
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            報表列印
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    承辦登記簿
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    歸檔文號清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    送文清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    展期清單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    公文附件表單
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    移交紀錄查詢及列印
+                                </a>
+                                <a href="#" class="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    機密公文封套列印
+                                </a>
+
+                                <b class="arrow"></b>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            電話錄案結案作業
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            上傳來文附件
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a href="#" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            會辦公文查詢
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-book"></i>
+                    <span class="menu-text bigger-130"> 綜合查詢 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+            <li class="">
+                <a href="">
+                    <i class="menu-icon fa fa-bookmark"></i>
+                    <span class="menu-text bigger-130"> 全文檢索 </span>
+                </a>
+
+                <b class="arrow"></b>
+            </li>
+        </ul><!-- /.nav-list -->
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"
+               data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'collapsed')
+            } catch (e) {
+            }
+        </script>
+    </div>
+
+    <div class="main-content">
+        <div class="main-content-inner">
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="#">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#">待辦案件</a>
+                    </li>
+                    <li class="active">待核判</li>
+                </ul><!-- /.breadcrumb -->
+                <form>
+                    <div class="nav-search" id="nav-search">
+                        <div class="input-group" style="width:200px;">
+					  <span class="input-icon">
+									<input type="text" placeholder="全文檢索" class="nav-search-input"
+                                           id="nav-search-input" autocomplete="off"
+                                           style="border-top-right-radius: 0!important;border-bottom-right-radius: 0!important;"/>
+									<i class="ace-icon fa fa-search nav-search-icon"></i>
+								</span>
+                            <span class="input-group-addon"
+                                  style="border-radius:4px!important;background:#6fb3e0!important;border-top-left-radius: 0!important;border-bottom-left-radius: 0!important;border: 1px solid #6fb3e0;width:308px"><i
+                                    class="fa fa-info"></i></span>
+                        </div>
+                    </div><!-- /.nav-search -->
+                </form>
+            </div>
+
+            <div class="page-content">
+                <div class="row">
+                    <!-- iframe -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://www.w3schools.com"></iframe>
+                    </div>
+
+                    <!-- form -->
+                    <div class="row">
+                        <div class="col-xs-12">
+
+                            <!-- buttons -->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="clearfix">
+                                        <div class="tableTools-container1">
+                                            <button class="btn btn-primary">
+                                                <i class="ace-icon fa fa-floppy-o align-top bigger-125"></i>
+                                                儲　　存
+                                            </button>
+                                            <button class="btn btn-yellow">
+                                                <i class="ace-icon fa fa-files-o align-top bigger-125"></i>
+                                                複　　本
+                                            </button>
+                                            <button class="btn btn-pink">
+                                                <i class="ace-icon fa fa-pencil-square-o align-top bigger-125"></i>
+                                                編　　輯
+                                            </button>
+                                            <button id="load" class="btn btn-success">
+                                                <i class="ace-icon fa fa-file-image-o align-top bigger-125"></i>
+                                                OCR掃描
+                                            </button>
+                                            <div class="pull-right tableTools-container "></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr style="margin: 8px 0;"/>
+
+                            <!-- tabs -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="widget-box transparent" id="recent-box">
+                                        <div class="widget-header">
+                                            <div class="widget-toolbar-left no-border">
+                                                <ul class="nav nav-tabs tab-color-blue" id="recent-tab">
+                                                    <li class="active">
+                                                        <a data-toggle="tab" href="#view-tab1">　　公文資料　　</a>
+                                                    </li>
+
+                                                    <li style="background:#595959">
+                                                        <a data-toggle="tab" href="#view-tab2"
+                                                           style="background:#595959">　　附件資料　　</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="widget-body">
+                                            <div class="widget-main padding-4">
+                                                <div class="tab-content padding-8">
+                                                    <div id="view-tab1" class="tab-pane active">
+                                                        view-tab1
+                                                    </div><!-- /.#view-tab1 -->
+                                                    <div id="view-tab2" class="tab-pane">
+                                                        view-tab2
+                                                    </div><!-- /.#view-tab2 -->
+                                                </div>
+                                            </div><!-- /.widget-main -->
+                                        </div><!-- /.widget-body -->
+                                    </div><!-- /.widget-box -->
+                                </div><!-- /.col -->
+                                <!-- PAGE CONTENT ENDS -->
+                            </div>
+
+                            <hr style="margin: 8px 0;"/>
+
+                            <!-- form -->
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                                            <div class="col-sm-10">
+                                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox"> Remember me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" class="btn btn-default">Sign in</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="margin: 8px 0;"/>
+                    <!-- items -->
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                                 width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+                            <h4>Label</h4>
+                            <span class="text-muted">Something else</span>
+                        </div>
+                    </div>
+
+                    <hr style="margin: 8px 0;"/>
+
+                    <!-- table -->
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <h2 class="sub-header">Section title</h2>
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                        <th>Header</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1,001</td>
+                                        <td>Lorem</td>
+                                        <td>ipsum</td>
+                                        <td>dolor</td>
+                                        <td>sit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,002</td>
+                                        <td>amet</td>
+                                        <td>consectetur</td>
+                                        <td>adipiscing</td>
+                                        <td>elit</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,003</td>
+                                        <td>Integer</td>
+                                        <td>nec</td>
+                                        <td>odio</td>
+                                        <td>Praesent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,003</td>
+                                        <td>libero</td>
+                                        <td>Sed</td>
+                                        <td>cursus</td>
+                                        <td>ante</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,004</td>
+                                        <td>dapibus</td>
+                                        <td>diam</td>
+                                        <td>Sed</td>
+                                        <td>nisi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,005</td>
+                                        <td>Nulla</td>
+                                        <td>quis</td>
+                                        <td>sem</td>
+                                        <td>at</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,006</td>
+                                        <td>nibh</td>
+                                        <td>elementum</td>
+                                        <td>imperdiet</td>
+                                        <td>Duis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,007</td>
+                                        <td>sagittis</td>
+                                        <td>ipsum</td>
+                                        <td>Praesent</td>
+                                        <td>mauris</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,008</td>
+                                        <td>Fusce</td>
+                                        <td>nec</td>
+                                        <td>tellus</td>
+                                        <td>sed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,009</td>
+                                        <td>augue</td>
+                                        <td>semper</td>
+                                        <td>porta</td>
+                                        <td>Mauris</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,010</td>
+                                        <td>massa</td>
+                                        <td>Vestibulum</td>
+                                        <td>lacinia</td>
+                                        <td>arcu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,011</td>
+                                        <td>eget</td>
+                                        <td>nulla</td>
+                                        <td>Class</td>
+                                        <td>aptent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,012</td>
+                                        <td>taciti</td>
+                                        <td>sociosqu</td>
+                                        <td>ad</td>
+                                        <td>litora</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,013</td>
+                                        <td>torquent</td>
+                                        <td>per</td>
+                                        <td>conubia</td>
+                                        <td>nostra</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,014</td>
+                                        <td>per</td>
+                                        <td>inceptos</td>
+                                        <td>himenaeos</td>
+                                        <td>Curabitur</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1,015</td>
+                                        <td>sodales</td>
+                                        <td>ligula</td>
+                                        <td>in</td>
+                                        <td>libero</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+    <div class="footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+						<span class="bigger-120">
+							康大 &copy; 2015-2016
+						</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+<!--loading mask-->
+<script src="assets/js/vendor/jquery.blockUI.js"></script>
+<!--bootstrap-->
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/bootbox.min.js"></script>
+<!-- ace scripts -->
+<script src="assets/js/vendor/ace-elements.min.js"></script>
+<script src="assets/js/vendor/ace.min.js"></script>
+<!--Avoid `console` errors-->
+<script src="assets/js/plugins.js"></script>
+<!-- Custom -->
+<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
